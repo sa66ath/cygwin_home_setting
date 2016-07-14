@@ -1,0 +1,2 @@
+BrightTag.instance.errors({enabled:false});
+BrightTag.instance.appendContent('\x3cscript type\x3d\x22text/javascript\x22\x3e\n        var _uah \x3d _uah || {};\n            _uah[\x27id\x27] \x3d "9171380";\n            _uah[\x27h\x27] \x3d ((parseInt("9171380") + 11) * 7).toString();\n            _uah[\x27oem_id\x27] \x3d 6;\n            _uah[\x27lg_id\x27] \x3d _uah[\x27lg_id\x27] || \x27\x27;\n      \x3c/script\x3e\n      \x3cscript type\x3d\x22text/javascript\x22 src\x3d\x22//y.nakanohito.jp/ua/ya.js\x22\x3e\x3c/script\x3e',{tagId:2246021,group:'user_local'});

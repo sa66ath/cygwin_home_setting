@@ -1,0 +1,28 @@
+div.widget-hatena-bookmark-widget {
+  padding: 0;
+  text-align: left;
+}
+.hatena-bookmark div.hatena-moduletitle a img {
+    display: none;
+}
+.hatena-bookmark div.hatena-modulefooter {
+  display: none;
+}
+.hatena-modulebody span.hatena-bookmark-count a {
+  margin-left: 0.2em;
+  text-decoration: underline;
+}
+.hatena-modulebody span.hatena-bookmark-count em a {
+  background-color: #fff0f0;
+  font-weight: bold;
+  display: inline;
+  font-style: normal;
+  color: #ff6666;
+}
+.hatena-modulebody span.hatena-bookmark-count  strong a {
+  background-color: #ffcccc;
+  font-weight: bold;
+  font-style: normal;
+  display: inline;
+  color: red;
+}

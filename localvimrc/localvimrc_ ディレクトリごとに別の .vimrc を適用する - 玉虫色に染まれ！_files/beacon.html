@@ -1,0 +1,158 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<!-- saved from url=(0043)http://cf.im-apps.net/imid/beacon.html?sl=3 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+    </head>
+    <body>
+<script type="text/javascript" async="" src="./gtm(3).js"></script><script type="text/javascript" async="" src="./audience"></script><script language="javascript">
+<!--
+var _itm_ = {};
+(function(w,d){
+    // definitions
+    var now = parseInt((new Date())/1000);
+    var pr = (("https:"==d.location.protocol)?"https://":"http://");
+    var cookies = (function(){
+        var c=d.cookie.split(";"),r={};
+        for(var i=0,len=c.length;i<len;i++){
+            c[i] = c[i].replace(/^\s+|\s+$/g, "");
+            r[c[i].split("=")[0]] = c[i].split("=")[1];
+        }
+        return r;
+    })();
+    var imid = cookies["imid"];
+    var synced_imid = cookies["synced_imid"] || 0;
+    var synced_3rd = cookies["synced_3rd"] || 0;
+    var params = (function(){
+        var p = w.location.search.substring(1).split("&"),r={},e;
+        for(var i=0,len=p.length;i<len;i++){
+            e = p[i].split('=');
+            r[decodeURIComponent(e[0])] = decodeURIComponent((e[1]||"").replace(/\+/g," "));
+        }
+        return r;
+    })();
+    var sync_level = params["sl"] || 2;
+    var check_ua = function(ls){
+        var ua = w.navigator.userAgent;
+        for(var i=0,len=ls.length;i<len;i++){
+            if(ua.indexOf(ls[i]) >= 0){
+                return true;
+            }
+        }
+        return false;
+    };
+    var is_sp = check_ua(["iPhone","iPod","iPad","Android"]);
+    var is_safari = check_ua(["safari"]);
+    var create_beacon = function(src){
+        var img = d.createElement("img");
+        img.src = src;
+        img.style.visibility = "hidden";
+        d.body.appendChild(img);
+    }
+    var create_script_tag = function(url){
+        var e = d.createElement("script");
+        e.type = "text/javascript";
+        e.async = true;
+        e.src = url;
+        st = d.getElementsByTagName("script")[0];
+        st.parentNode.insertBefore(e,st);
+    };
+    var set_cookie = function(name,value,days){
+        var date = new Date();
+        date.setTime(date.getTime()+(days*24*60*60*1000));
+        var expires = "; expires="+date.toGMTString();
+        d.cookie = name+"="+value+expires+"; domain=im-apps.net; path=/";
+    }
+    // imid sync
+    if((!imid || now-synced_imid>60*60*24) && !is_safari){
+        create_beacon(pr+"sync.im-apps.net/imid/set?no_sync=1");
+        set_cookie("synced_imid",now,365*2);
+    }
+    // 3rd sync
+    if(imid && sync_level>=2){
+        var sync_groups = [
+            { name:"g1", rules:[
+                { url:"sync.dmp.fout.jp/serve/?id=3920&mt=47", skip_imid:true },
+                { url:"cm.g.doubleclick.net/pixel?google_nid=intimatemerger_dmp&google_cm", skip_imid:true },
+                { url:"s.thebrighttag.com/csx?tp=wAiXPd0", skip_imid:true },
+                { url:"sync.shinobi.jp/v2/sync/ne?r=https%3A%2F%2Fsync.im-apps.net%2Fimid%2Fset%3Fcid%3D10338%26tid%3Dsid%26uid%3D", skip_imid:true },
+                { url_http:"http://rtd.tubemogul.com/upi/pid/ASSwM7HG?redir=http%3A%2F%2Fsync.im-apps.net%2Fimid%2Fset%3Fcid%3D5661%26tid%3Dtid%26uid%3D%24%7BTM_USER_ID%7D", url_https:"https://rtd.tubemogul.com/upi/pid/ASSwM7HG?redir=https%3A%2F%2Fsync.im-apps.net%2Fimid%2Fset%3Fcid%3D5661%26tid%3Dtid%26uid%3D%24%7BTM_USER_ID%7D", skip_imid:true }
+            ]},
+            { name:"g2", rules:[
+                { url:"dpm.demdex.net/ibs:dpid=14701&dpuuid=" },
+                { url:"d.turn.com/r/dd/id/L2NzaWQvMS9jaWQvMjg1MDAyNzAvdC8y/dpuid/" },
+                { url:"pixel.advertising.com/ups/54/sync?redir=true&uid=" },
+                { url:"kimgcs.deqwas.net/DmpSyncService/Sync.aspx?c=6859", skip_imid:true },
+                { url:"sync.tidaltv.com/GenericUserSync.ashx?dpid=2972", skip_imid:true }
+            ]},
+            { name:"g3", rules:[
+                { url_http:"http://h.accesstrade.net/atd/dsync?syt=7&syid=", url_https:"https://s.accesstrade.net/atd/dsync?syt=7&syid=" },
+                { url:"cr-p10000.ladsp.com/pid/10000", skip_imid:true },
+                { url:"s-jp.acxiomapac.com/sci?pid=92002&uid=" },
+                { url:"match.adsrvr.org/track/cmf/generic?ttd_pid=intmerger&ttd_tpi=1", skip_imid:true },
+                { url:"api.primecaster.net/adlogue/api/sync/im", skip_imid:true },
+                { url:"sync.dmp.fout.jp/store/?id=3920&mt=46&uaid=" }
+            ]}
+        ];
+        var sg_name,sg_rules;
+        for(var i=0,len=sync_groups.length;i<len;i++){
+            sg_name = sync_groups[i].name;
+            sg_rules = sync_groups[i].rules;
+            group_synced = cookies["synced_group_"+sg_name];
+            if(!(group_synced) || now - group_synced > 60*60*24*3){
+                var rule,url;
+                for(var j=0,lenj=sg_rules.length;j<lenj;j++){
+                    rule = sg_rules[j];
+                    if(rule.pc_only && is_sp){ continue; }
+                    if(rule.sp_only && !is_sp){ continue; }
+                    if(rule.url_http && rule.url_https){
+                        url = ((pr=="http://")?rule.url_http:rule.url_https)+((rule.skip_imid)?"":imid);
+                    }else{
+                        url = ((rule.must_http)?"http://":pr)+rule.url+((rule.skip_imid)?"":imid);
+                    }
+                    create_beacon(url);
+                }
+                set_cookie("synced_group_"+sg_name,now,365*2);
+                break;
+            }
+        }
+    }
+    // gtm
+    if(imid && sync_level>=3){
+        var gtm_rules = [["TZL4QB",1],["5C9GZQ",1],["N5SDDB",1],["DNR2NX",7],["MFDRQK",7],["5GNMF6",7]];
+        var gtm_id,gtm_synced,gtm_expire;
+        for(var i=0,len=gtm_rules.length;i<len;i++){
+            gtm_id = gtm_rules[i][0];
+            gtm_expire = gtm_rules[i][1];
+            gtm_synced = cookies["synced_gtm_"+gtm_id];
+            if(!(gtm_synced) || now - gtm_synced > 60*60*24*gtm_expire){
+                _itm_.sa_cb = function(p){
+                    _itm_.aid = "-";
+                    _itm_.sids = "";
+                    if(p.audience_id){
+                        _itm_.aid = p.audience_id;
+                        var s = ',';
+                        p = p.segments;
+                        for(var i=0,len=p.length;i<len;i++){
+                            s += p[i].segment_id + ',';
+                        }
+                        _itm_.sids = s;
+                    }
+                    var dl="im_beacon_dl";
+                    w[dl] = w[dl] || [];
+                    w[dl].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+                    create_script_tag(pr+'www.googletagmanager.com/gtm.js?id=GTM-'+gtm_id+"&l="+dl);
+                }
+                create_script_tag(pr+'cnt.fout.jp/segapi/audience?callback=_itm_.sa_cb&cvid=mHDmdffSCFxfWgmjsQ');
+                set_cookie("synced_gtm_"+gtm_id,now,365);
+                break;
+            }
+        }
+    }
+
+})(window,document);
+// -->
+</script><img src="./set" style="visibility: hidden;"><img src="./saved_resource(1)" style="visibility: hidden;"><img src="./pixel" style="visibility: hidden;"><img src="./csx" style="visibility: hidden;"><img src="./ne" style="visibility: hidden;"><img src="./ASSwM7HG" style="visibility: hidden;">
+    
+
+
+</body></html>

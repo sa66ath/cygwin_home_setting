@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!-- saved from url=(0140)http://cdn.api.b.hatena.ne.jp/entry/button/?url=http%3A%2F%2Fd.hatena.ne.jp%2Fover80%2F20140830%2Flocalvimrc&layout=vertical-balloon&lang=ja -->
+<html lang="ja"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <link rel="canonical" href="http://b.hatena.ne.jp/entry/d.hatena.ne.jp/over80/20140830/localvimrc">
+  <title>はてなブックマークボタン</title>
+  <link rel="stylesheet" href="./reset.css" type="text/css" media="all">
+  <link rel="stylesheet" href="./entry-button.css" type="text/css" media="all">
+  <script>
+    function postMessageToParentWin(type, dataStr, useFallback) {
+        var match = window.name.match(/^(\w+)\|((https?:\/\/[^\/?#]+)[^#]*)/);
+        if (!match) return;
+        if (window.postMessage) {
+            window.parent.postMessage('HBMessage@{"type": "' + type + '", "data": ' + dataStr + '}', match[3]);
+            return;
+        }
+        if (useFallback) {
+            var url = match[2] + "#HBMessage-" + match[1] + "-" + type + "/" + dataStr;
+            try {
+                window.parent.location.replace(url);
+            } catch (ex) {
+                window.parent.location.href = url;
+            }
+        }
+    }
+    function clickHandler() {
+        postMessageToParentWin("click", "null", true);
+    }
+  </script>
+  </head><body onkeypress="if (event.keyCode === 13) { clickHandler(); return false; }">
+    <div class="b-area-standard vertical ja">
+      <a href="http://b.hatena.ne.jp/entry/d.hatena.ne.jp/over80/20140830/localvimrc" class="b-btn" target="_top" title="このエントリーをはてなブックマークに追加 (2 users)" onclick="if ((event.which || event.button) &lt;= 1) { clickHandler(); return false; }">
+        <span>ブックマーク</span>
+      </a>
+      <a href="http://b.hatena.ne.jp/entry/d.hatena.ne.jp/over80/20140830/localvimrc" class="b-count" target="_blank">2</a>
+    </div>
+  
+
+</body></html>

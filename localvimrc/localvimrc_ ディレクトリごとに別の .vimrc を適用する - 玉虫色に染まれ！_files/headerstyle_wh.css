@@ -1,0 +1,79 @@
+
+#simple-header {
+  position: relative;
+  text-align: left;
+  padding: 5px 0 10px 0;
+  background: #ffffff;
+}
+
+#simple-header img, #simple-header input {
+  vertical-align: middle;
+}
+
+#simple-header a{
+  border: none;
+}
+
+#simple-header a img {
+  border: none;
+}
+
+#simple-header img {
+  margin-top: 2px;
+}
+
+#simple-header img#logo-hatena {
+  margin-left: 10px;
+}
+
+#simple-header form.search-form {
+  display: inline;
+}
+
+#simple-header input, #simple-header select{
+  margin: 0 5px 0 0;
+  font-size: 12px;
+  height: 18px;
+  padding: 0;
+}
+
+#simple-header input.search-word {
+  width: 10em;
+  font-size: 12px;
+  border: 1px solid #b1b4b9;
+  background: #ffffff;
+  margin-left: 5px;
+}
+
+#simple-header input.search-button {
+  background: #d2d6de;
+  border: 1px solid #b1b4b9;
+  width: 38px;
+  color: #ffffff;
+  font-family: sans-serif;
+}
+
+#simple-header ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 6px;
+  right: 8px;
+}
+
+#simple-header ul li {
+  display: inline;
+  font-size: 80%;
+  padding-left: 5px;
+  font-family: sans-serif;
+}
+
+#simple-header ul li a {
+  color: #93969d;
+  text-decoration: none;
+}
+
+#simple-header ul li a:hover {
+  text-decoration: underline;
+}

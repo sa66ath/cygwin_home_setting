@@ -1,0 +1,749 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0048)http://d.hatena.ne.jp/over80/20140830/localvimrc -->
+<html xmlns:og="http://ogp.me/ns#"><head><meta http-equiv="Content-Type" content="text/html; charset=EUC-JP">
+
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<title> localvimrc: ディレクトリごとに別の .vimrc を適用する - 玉虫色に染まれ！</title>
+<link rel="start" href="http://d.hatena.ne.jp/" title="玉虫色に染まれ！">
+<link rel="help" href="http://d.hatena.ne.jp/help" title="ヘルプ">
+<link rel="prev" href="http://d.hatena.ne.jp/over80/20140417/1397745558" title="[linux] 打ち込めないような名前...">
+<link rel="next" href="http://d.hatena.ne.jp/over80/20141013/1413174967" title="[電子工作] AVRで秋月のI2C接続...">
+
+<link rel="stylesheet" href="./localvimrc_ ディレクトリごとに別の .vimrc を適用する - 玉虫色に染まれ！_files/base.css" type="text/css" media="all">
+<link rel="stylesheet" href="./localvimrc_ ディレクトリごとに別の .vimrc を適用する - 玉虫色に染まれ！_files/headerstyle_wh.css" type="text/css" media="all">
+<link rel="stylesheet" href="./localvimrc_ ディレクトリごとに別の .vimrc を適用する - 玉虫色に染まれ！_files/breeze.css" type="text/css" media="all">
+
+
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://d.hatena.ne.jp/over80/rss">
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="http://d.hatena.ne.jp/over80/rss2">
+
+<link rel="meta" type="application/rdf+xml" title="FOAF" href="http://d.hatena.ne.jp/over80/foaf">
+<link rel="search" type="application/opensearchdescription+xml" href="http://d.hatena.ne.jp/over80/opensearch/diary.xml" title="玉虫色に染まれ！内日記検索">
+<link rel="search" type="application/opensearchdescription+xml" href="http://d.hatena.ne.jp/over80/opensearch/archive.xml" title="玉虫色に染まれ！内一覧検索">
+
+
+<link rel="shortcut icon" href="http://d.hatena.ne.jp/images/diary/over80/favicon.ico">
+
+
+<link rel="canonical" href="http://d.hatena.ne.jp/over80/20140830/localvimrc">
+
+
+<style type="text/css">
+<!-- 
+pre {
+  overflow: auto;
+  border: 2px inset;
+  padding: 3px;
+}
+
+.section h3.title {
+  border-left-width:15px;
+  padding-left: 10px;
+}
+
+em, em a {
+  color:#333333;
+  font-weight:bold;
+}
+
+.hatena-modulebody li {
+  border-bottom:1px solid #EEEEEE;
+}
+.hatena-modulebody ul {
+  list-style-type:none;
+}
+-->
+</style>
+
+
+<script type="text/javascript" async="" src="./localvimrc_ ディレクトリごとに別の .vimrc を適用する - 玉虫色に染まれ！_files/pageviews"></script><script type="text/javascript" async="" src="./localvimrc_ ディレクトリごとに別の .vimrc を適用する - 玉虫色に染まれ！_files/segment"></script><script type="text/javascript" async="" src="./localvimrc_ ディレクトリごとに別の .vimrc を適用する - 玉虫色に染まれ！_files/pageviews(1)"></script><script type="text/javascript" async="" src="./localvimrc_ ディレクトリごとに別の .vimrc を適用する - 玉虫色に染まれ！_files/conversion_async.js"></script><script type="text/javascript" async="" src="./localvimrc_ ディレクトリごとに別の .vimrc を適用する - 玉虫色に染まれ！_files/conversion_async.js"></script><script type="text/javascript" async="" src="./localvimrc_ ディレクトリごとに別の .vimrc を適用する - 玉虫色に染まれ！_files/conversion_async.js"></script><script type="text/javascript" async="" src="./localvimrc_ ディレクトリごとに別の .vimrc を適用する - 玉虫色に染まれ！_files/segment(1)"></script><script type="text/javascript" async="" src="./localvimrc_ ディレクトリごとに別の .vimrc を適用する - 玉虫色に染まれ！_files/conversion_async.js"></script><script type="text/javascript" async="" src="./localvimrc_ ディレクトリごとに別の .vimrc を適用する - 玉虫色に染まれ！_files/conversion_async.js"></script><script type="text/javascript" async="" src="./localvimrc_ ディレクトリごとに別の .vimrc を適用する - 玉虫色に染まれ！_files/conversion_async.js"></script><script type="text/javascript" async="" src="./localvimrc_ ディレクトリごとに別の .vimrc を適用する - 玉虫色に染まれ！_files/pb.js"></script><script async="" src="./localvimrc_ ディレクトリごとに別の .vimrc を適用する - 玉虫色に染まれ！_files/gtm.js"></script><script async="" src="./localvimrc_ ディレクトリごとに別の .vimrc を適用する - 玉虫色に染まれ！_files/gtm.js"></script><script type="text/javascript" src="./localvimrc_ ディレクトリごとに別の .vimrc を適用する - 玉虫色に染まれ！_files/ya.js"></script><script src="./localvimrc_ ディレクトリごとに別の .vimrc を適用する - 玉虫色に染まれ！_files/expansion_embed.js"></script><script type="text/javascript" async="" src="./localvimrc_ ディレクトリごとに別の .vimrc を適用する - 玉虫色に染まれ！_files/get"></script><script type="text/javascript" async="" src="./localvimrc_ ディレクトリごとに別の .vimrc を適用する - 玉虫色に染まれ！_files/td-1.5.1.js"></script><script type="text/javascript" async="" src="./localvimrc_ ディレクトリごとに別の .vimrc を適用する - 玉虫色に染まれ！_files/pageviews(2)"></script><script type="text/javascript" async="" src="./localvimrc_ ディレクトリごとに別の .vimrc を適用する - 玉虫色に染まれ！_files/segment(2)"></script><script async="" src="./localvimrc_ ディレクトリごとに別の .vimrc を適用する - 玉虫色に染まれ！_files/tdim-1.1.0.min.js"></script><script type="text/javascript" async="" src="./localvimrc_ ディレクトリごとに別の .vimrc を適用する - 玉虫色に染まれ！_files/gtm(1).js"></script><script type="text/javascript" async="" src="./localvimrc_ ディレクトリごとに別の .vimrc を適用する - 玉虫色に染まれ！_files/redirect.js"></script><script type="text/javascript" async="" src="./localvimrc_ ディレクトリごとに別の .vimrc を適用する - 玉虫色に染まれ！_files/redirect.js"></script><script type="text/javascript" async="" src="./localvimrc_ ディレクトリごとに別の .vimrc を適用する - 玉虫色に染まれ！_files/audience"></script><script type="text/javascript" src="./localvimrc_ ディレクトリごとに別の .vimrc を適用する - 玉虫色に染まれ！_files/tag"></script><script async="" type="text/javascript" src="./localvimrc_ ディレクトリごとに別の .vimrc を適用する - 玉虫色に染まれ！_files/hatena_bigmining.js"></script><script type="text/javascript" async="" src="./localvimrc_ ディレクトリごとに別の .vimrc を適用する - 玉虫色に染まれ！_files/segmentation.js"></script><script async="" type="text/javascript" src="./localvimrc_ ディレクトリごとに別の .vimrc を適用する - 玉虫色に染まれ！_files/user.segment.json"></script><script async="" type="text/javascript" src="./localvimrc_ ディレクトリごとに別の .vimrc を適用する - 玉虫色に染まれ！_files/hatena_bigmining.js"></script><script type="text/javascript" async="" src="./localvimrc_ ディレクトリごとに別の .vimrc を適用する - 玉虫色に染まれ！_files/segmentation.js"></script><script async="" type="text/javascript" src="./localvimrc_ ディレクトリごとに別の .vimrc を適用する - 玉虫色に染まれ！_files/user.segment.json"></script><script type="text/javascript" async="" src="./localvimrc_ ディレクトリごとに別の .vimrc を適用する - 玉虫色に染まれ！_files/ga.js"></script><script async="" type="text/javascript" src="./localvimrc_ ディレクトリごとに別の .vimrc を適用する - 玉虫色に染まれ！_files/gpt.js"></script><script async="" type="text/javascript" src="./localvimrc_ ディレクトリごとに別の .vimrc を適用する - 玉虫色に染まれ！_files/jstag"></script><script async="" type="text/javascript" src="./localvimrc_ ディレクトリごとに別の .vimrc を適用する - 玉虫色に染まれ！_files/dfp.config.json"></script><script async="" src="./localvimrc_ ディレクトリごとに別の .vimrc を適用する - 玉虫色に染まれ！_files/itm.js"></script><script async="" src="./localvimrc_ ディレクトリごとに別の .vimrc を適用する - 玉虫色に染まれ！_files/tag.js"></script><script type="text/javascript" async="" src="./localvimrc_ ディレクトリごとに別の .vimrc を適用する - 玉虫色に染まれ！_files/dc.js"></script><script type="text/javascript" async="" src="./localvimrc_ ディレクトリごとに別の .vimrc を適用する - 玉虫色に染まれ！_files/analytics.js"></script><script async="" type="text/javascript" src="./localvimrc_ ディレクトリごとに別の .vimrc を適用する - 玉虫色に染まれ！_files/dfp.config.json"></script><script async="" type="text/javascript" src="./localvimrc_ ディレクトリごとに別の .vimrc を適用する - 玉虫色に染まれ！_files/gpt.js"></script><script async="" type="text/javascript" src="./localvimrc_ ディレクトリごとに別の .vimrc を適用する - 玉虫色に染まれ！_files/jstag"></script><script async="" type="text/javascript" src="./localvimrc_ ディレクトリごとに別の .vimrc を適用する - 玉虫色に染まれ！_files/audience(1)"></script><script src="./localvimrc_ ディレクトリごとに別の .vimrc を適用する - 玉虫色に染まれ！_files/ca-pub-4438296558807254.js"></script><script id="facebook-jssdk" src="http://connect.facebook.net/ja_JP/sdk.js#xfbml=1&amp;version=v2.3&amp;appId=189164841141201"></script><script async="" src="./localvimrc_ ディレクトリごとに別の .vimrc を適用する - 玉虫色に染まれ！_files/gtm(2).js"></script><script type="text/javascript">if(/[\x3c\x3e\x22]/.test(location.hash))location.hash=location.hash.replace(/[\x3c\x3e\x22]/g,'');if(/[\x3c\x3e]/.test(document.referrer))location.href=location.href;</script>
+
+
+<meta property="og:type" content="article">
+<meta property="og:title" content=" localvimrc: ディレクトリごとに別の .vimrc を適用する - 玉虫色に染まれ！">
+<meta property="og:url" content="http://d.hatena.ne.jp/over80/20140830/localvimrc">
+<meta property="og:description" content=" 色々なソフトウェアプロジェクトを掛け持ちしていたり、一つのプロジェクトが複数のプロジェクトの寄せ集..">
+<meta property="og:site_name" content="はてなダイアリー">
+
+
+<!--
+<rdf:RDF
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:foaf="http://xmlns.com/foaf/0.1/">
+<rdf:Description rdf:about="http://d.hatena.ne.jp/over80/20140830/localvimrc">
+   <foaf:maker rdf:parseType="Resource">
+     <foaf:holdsAccount>
+       <foaf:OnlineAccount foaf:accountName="over80">
+         <foaf:accountServiceHomepage rdf:resource="http://www.hatena.ne.jp/" />
+       </foaf:OnlineAccount>
+     </foaf:holdsAccount>
+   </foaf:maker>
+</rdf:Description>
+</rdf:RDF>
+-->
+
+<link rel="alternate" media="handheld" type="text/html" href="http://d.hatena.ne.jp/over80/mobile?date=20140830&amp;section=localvimrc">
+<!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:dc="http://purl.org/dc/elements/1.1/"
+         xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/">
+<rdf:Description
+  rdf:about="http://d.hatena.ne.jp/over80/20140830/localvimrc"
+  trackback:ping="http://d.hatena.ne.jp/over80/20140830/localvimrc"
+  dc:title="[vim] localvimrc: ディレクトリごとに別の .vimrc を適用する"
+  dc:identifier="http://d.hatena.ne.jp/over80/20140830/localvimrc" />
+</rdf:RDF>
+-->
+
+<script type="text/javascript" src="./localvimrc_ ディレクトリごとに別の .vimrc を適用する - 玉虫色に染まれ！_files/Base.js"></script>
+<script type="text/javascript" src="./localvimrc_ ディレクトリごとに別の .vimrc を適用する - 玉虫色に染まれ！_files/Iter.js"></script>
+<script type="text/javascript" src="./localvimrc_ ディレクトリごとに別の .vimrc を適用する - 玉虫色に染まれ！_files/DOM.js"></script>
+<script type="text/javascript" src="./localvimrc_ ディレクトリごとに別の .vimrc を適用する - 玉虫色に染まれ！_files/Style.js"></script>
+<script type="text/javascript" src="./localvimrc_ ディレクトリごとに別の .vimrc を適用する - 玉虫色に染まれ！_files/Signal.js"></script>
+<script type="text/javascript" src="./localvimrc_ ディレクトリごとに別の .vimrc を適用する - 玉虫色に染まれ！_files/Async.js"></script>
+<script type="text/javascript" src="./localvimrc_ ディレクトリごとに別の .vimrc を適用する - 玉虫色に染まれ！_files/Logging.js"></script>
+<script type="text/javascript" src="./localvimrc_ ディレクトリごとに別の .vimrc を適用する - 玉虫色に染まれ！_files/BookmarkCommentViewer.js" charset="utf-8"></script>
+
+
+
+<meta name="twitter:card" content="summary">
+
+<meta name="twitter:site" content="@hatenablog">
+
+
+
+<script type="text/javascript" src="./localvimrc_ ディレクトリごとに別の .vimrc を適用する - 玉虫色に染まれ！_files/HatenaStar.js"></script>
+<script type="text/javascript">
+Hatena.Star.SiteConfig = {
+  entryNodes: {
+    'div.section': {
+      uri: 'h3 a',
+      title: 'h3',
+      container: 'h3'
+    }
+  }
+};
+Hatena.Author  = new Hatena.User('over80');
+Hatena.DiaryName  = new Hatena.User('over80');
+
+</script>
+
+
+
+<script type="text/javascript" src="./localvimrc_ ディレクトリごとに別の .vimrc を適用する - 玉虫色に染まれ！_files/twitter_entry_icon.js"></script>
+
+
+
+<script type="text/javascript" src="./localvimrc_ ディレクトリごとに別の .vimrc を適用する - 玉虫色に染まれ！_files/adcolor.js"></script>
+
+
+<script type="text/javascript" src="./localvimrc_ ディレクトリごとに別の .vimrc を適用する - 玉虫色に染まれ！_files/quick_pager.js"></script>
+<script type="text/javascript" src="./localvimrc_ ディレクトリごとに別の .vimrc を適用する - 玉虫色に染まれ！_files/diary_utils.js"></script>
+<script type="text/javascript" src="./localvimrc_ ディレクトリごとに別の .vimrc を適用する - 玉虫色に染まれ！_files/max_width_fotolife.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="./localvimrc_ ディレクトリごとに別の .vimrc を適用する - 玉虫色に染まれ！_files/jquery-1.4.2.min.js"></script>
+<script type="text/javascript">
+  jQuery.noConflict()(function($){
+    var j$ = jQuery;
+  });
+</script>
+
+
+
+
+<link rel="stylesheet" type="text/css" href="./localvimrc_ ディレクトリごとに別の .vimrc を適用する - 玉虫色に染まれ！_files/widget-hatenadiary.css"><script src="./localvimrc_ ディレクトリごとに別の .vimrc を適用する - 玉虫色に染まれ！_files/pubads_impl_90.js" async=""></script><script type="text/javascript" id="ox_acj_8233452955" src="./localvimrc_ ディレクトリごとに別の .vimrc を適用する - 玉虫色に染まれ！_files/acj"></script><link rel="prefetch" href="http://tpc.googlesyndication.com/safeframe/1-0-4/html/container.html"><script type="text/javascript" id="ox_acj_6732010730" src="./localvimrc_ ディレクトリごとに別の .vimrc を適用する - 玉虫色に染まれ！_files/acj(1)"></script><script type="text/javascript" charset="utf-8" async="" src="./localvimrc_ ディレクトリごとに別の .vimrc を適用する - 玉虫色に染まれ！_files/button.7db02ed7f152187eb82c1a43f0f8aca1.js"></script><script defer="" type="text/javascript" charset="utf-8" src="./localvimrc_ ディレクトリごとに別の .vimrc を適用する - 玉虫色に染まれ！_files/json"></script><style id="style-1-cropbar-clipper">/* Copyright 2014 Evernote Corporation. All rights reserved. */
+.en-markup-crop-options {
+    top: 18px !important;
+    left: 50% !important;
+    margin-left: -100px !important;
+    width: 200px !important;
+    border: 2px rgba(255,255,255,.38) solid !important;
+    border-radius: 4px !important;
+}
+
+.en-markup-crop-options div div:first-of-type {
+    margin-left: 0px !important;
+}
+</style><script src="./localvimrc_ ディレクトリごとに別の .vimrc を適用する - 玉虫色に染まれ！_files/entries.json" type="text/javascript"></script></head>
+<body>
+
+  <script>Hatena.Diary.UaTrakingID = 'UA-46127385-5';</script>
+ 
+<!-- Google Tag Manager -->
+<noscript>&lt;iframe src="//www.googletagmanager.com/ns.html?id=GTM-58NPH6"
+height="0" width="0" style="display:none;visibility:hidden"&gt;&lt;/iframe&gt;</noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-58NPH6');</script>
+<!-- End Google Tag Manager -->
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.3&appId=189164841141201";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+<div id="simple-header">
+
+  <a href="http://www.hatena.ne.jp/"><img src="./localvimrc_ ディレクトリごとに別の .vimrc を適用する - 玉虫色に染まれ！_files/hatena-simple_wh.gif" alt="Hatena::" title="Hatena::" id="logo-hatena" width="65" height="17"></a><a href="http://d.hatena.ne.jp/"><img src="./localvimrc_ ディレクトリごとに別の .vimrc を適用する - 玉虫色に染まれ！_files/diary-simple_wh.gif" alt="ブログ(Diary)" title="Diary" id="logo-diary" width="43" height="17"></a>
+  <form method="get" action="http://d.hatena.ne.jp/search" class="search-form">
+    <input type="text" class="search-word" name="word" value=""><input name="name" value="over80" type="hidden"><input type="submit" name="diary" value="日記" class="search-button"><input type="submit" name="submit" value="検索" class="search-button">
+  </form>
+  <ul class="menu">
+    <li><a href="http://d.hatena.ne.jp/over80/">ブログトップ</a></li>
+    <li><a href="http://d.hatena.ne.jp/over80/archive">記事一覧</a></li>
+
+
+
+    <li><a href="https://www.hatena.ne.jp/login?backurl=http%3A%2F%2Fd.hatena.ne.jp%2Fover80%2F20140830%2Flocalvimrc&amp;add_timestamp=1">ログイン</a></li>
+    <li><a href="https://www.hatena.ne.jp/register?location=http%3A%2F%2Fd.hatena.ne.jp%3Fvia%3D200186&amp;via=200186">無料ブログ開設</a></li>
+
+  </ul>
+</div>
+
+
+
+<h1><a href="http://d.hatena.ne.jp/over80/">玉虫色に染まれ！</a> <a href="http://a.hatena.ne.jp/append?http://d.hatena.ne.jp/over80/"><img src="./localvimrc_ ディレクトリごとに別の .vimrc を適用する - 玉虫色に染まれ！_files/a_append_wh.gif" title="このページをアンテナに追加" alt="このページをアンテナに追加" border="0" width="16" height="12" class="icon"></a> <a href="http://d.hatena.ne.jp/over80/rss"><img src="./localvimrc_ ディレクトリごとに別の .vimrc を適用する - 玉虫色に染まれ！_files/rss_wh.gif" alt="RSSフィード" title="RSSフィード" border="0" width="24" height="12" class="icon"></a> <a id="twitter-header-icon" href="http://twitter.com/over80s"><img src="./localvimrc_ ディレクトリごとに別の .vimrc を適用する - 玉虫色に染まれ！_files/icon-twitter.png" alt="Twitter" title="このページ作者のTwitterへ" border="0" width="16" height="16" class="icon"></a></h1>
+<div class="hatena-body">
+<div class="main">
+<div class="breadcrumbs"><a href="http://d.hatena.ne.jp/over80/">TOP</a>&nbsp;&gt;&nbsp;<a href="http://d.hatena.ne.jp/over80/20140830">2014-08-30</a>&nbsp;&gt;&nbsp; localvimrc: ディレクトリごと...</div> 
+
+
+
+
+
+
+
+
+<div class="calendar" id="pager-top">
+  <a rel="prev" href="http://d.hatena.ne.jp/over80/20140417/1397745558" class="prev">&lt;[linux] 打ち込めないような名前...</a>&nbsp;<span class="delimiter">|</span>&nbsp;<a rel="next" href="http://d.hatena.ne.jp/over80/20141013/1413174967" class="next">[電子工作] AVRで秋月のI2C接続...&gt;</a><span id="edit-in-place-add"></span>
+</div>
+<div id="days">
+
+<div class="day">
+<h2><a href="http://d.hatena.ne.jp/over80/20140830" rel="nofollow"><span class="date">2014-08-30</span></a></h2>
+
+<div class="body">
+
+<!-- rakuten_ad_target_begin -->
+<!-- google_ad_section_start -->
+
+		<div class="section">
+			<h3 class="title"><a href="http://d.hatena.ne.jp/over80/20140830/localvimrc" name="localvimrc"> localvimrc: ディレクトリごとに別の .vimrc を適用する</a><span class="hatena-star-comment-container"><img src="./localvimrc_ ディレクトリごとに別の .vimrc を適用する - 玉虫色に染まれ！_files/comment_dg.gif" tabindex="0" alt="Comments" title="Comments" class="hatena-star-comment-button" style="cursor: pointer; margin: 0px; padding: 0px; border: none; vertical-align: middle; display: none;"></span><span class="hatena-star-star-container"><img src="./localvimrc_ ディレクトリごとに別の .vimrc を適用する - 玉虫色に染まれ！_files/add_dg.gif" tabindex="0" alt="Add Star" title="Add Star" class="hatena-star-add-button" style="cursor: pointer; margin: 0px 3px; padding: 0px; border: none; vertical-align: middle;"></span></h3>
+			<p class="sectionheader"><span class="sectioncategory"><a href="http://d.hatena.ne.jp/over80/searchdiary?word=%2A%5Bvim%5D" class="sectioncategory">vim</a></span></p>
+			<p>色々なソフトウェアプロジェクトを掛け持ちしていたり、一つのプロジェクトが複数のプロジェクトの寄せ集めだったりすると、プロジェクトごとにコーディングルールなどが異なっていて、エディタの設定を使いわけたくなることがあります。そんな時に便利なのが localvimrc という <a class="keyword" href="http://d.hatena.ne.jp/keyword/vim">vim</a> のプラグインです。</p>
+			<h4> インストール方法</h4>
+			<p>まず、<a href="http://www.vim.org/scripts/script.php?script_id=441" target="_blank">vim.org の localvimrc のページ</a>に行き、最新バージョンの localvimrc.<a class="keyword" href="http://d.hatena.ne.jp/keyword/vba">vba</a> をダウンロードします。</p>
+			<p>あとは、そのファイルを vim で開いて、以下の vim コマンドを打つだけです。</p>
+<pre>:so %
+</pre>
+
+			<p>これで、 ~/.vim/plugin/localvimrc.vim がインストールされます。</p>
+			<p>ダウンロードしたファイルは削除してしまってかまいません。</p>
+			<h4> 使いかた</h4>
+			<p>特別な設定を加えたい<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%BD%A1%BC%A5%B9%A5%B3%A1%BC%A5%C9">ソースコード</a>ツリーのトップディレクトリに .lvimrc という名前のファイルを作成すると、それ以下のファイルを開く際は、通常の ~/.vimrc に加えてその .lvimrc も読み込まれるようになります。</p>
+			<p>ただし、セキュリティ的な観点から、読み込み時に毎回「読み込んで良いか？」と聞いてきて鬱陶しいので、以下のいずれかの設定を ~/.vimrc に追加しておいた方が良いでしょう。</p>
+<pre class="syntax-highlight">let g:localvimrc_ask=0        " いちいち聞かずに勝手に読み込む
+let g:localvimrc_persistent=2 " 一度聞いたファイルを記録しておき、次回からは自動で読み込む
+let g:localvimrc_persistent=1 " 聞いたときに大文字のY/N/Aで答えた場合のみ上記の動作をする
+</pre>
+
+			<p>私は一番最後の設定で使っています。なお、選択の記録はファイル ~/.localvimrc_persistent （設定で変更可）に保存されます。</p>
+			<p>また他にも .lvimrc　は(これもセキュリティ的に) sandbox　で実行されるのですが、それを避ける設定や、複数の .lvimrc が見つかった場合にどう処理するか（ぜんぶ実行、一番深いところのもののみ実行など)、といったいろいろな設定が可能です。詳しくは下記の公式のドキュメントを参照してください。</p>
+			<p><a href="https://github.com/embear/vim-localvimrc/blob/master/doc/localvimrc.txt" target="_blank">https://github.com/embear/vim-localvimrc/blob/master/doc/localvimrc.txt</a></p>
+			<p class="share-button sectionfooter"><iframe class="hatena-bookmark-button-frame" title="このエントリーをはてなブックマークに追加" frameborder="0" scrolling="no" width="80" height="60" src="javascript:false" style="width: 80px; height: 60px;" src="./localvimrc_ ディレクトリごとに別の .vimrc を適用する - 玉虫色に染まれ！_files/saved_resource.html"></iframe><script type="text/javascript" src="./localvimrc_ ディレクトリごとに別の .vimrc を適用する - 玉虫色に染まれ！_files/bookmark_button.js" charset="utf-8" async="async"></script><iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" class="twitter-share-button twitter-share-button-rendered twitter-tweet-button" title="Twitter Tweet Button" src="./localvimrc_ ディレクトリごとに別の .vimrc を適用する - 玉虫色に染まれ！_files/tweet_button.b7de008f493a5185d8df1aedd62d77c6.ja.html" style="position: static; visibility: visible; width: 67px; height: 20px;" data-url="http://d.hatena.ne.jp/over80/20140830/localvimrc"></iframe><script type="text/javascript" src="./localvimrc_ ディレクトリごとに別の .vimrc を適用する - 玉虫色に染まれ！_files/widgets.js" charset="utf-8"></script></p>
+
+			<p class="sectionfooter"><a href="http://d.hatena.ne.jp/over80/20140830/localvimrc">Permalink</a> | <a href="http://d.hatena.ne.jp/over80/20140830/localvimrc#c">コメント(0)</a> | <a href="http://d.hatena.ne.jp/over80/20140830/localvimrc#tb">トラックバック(0)</a> <a href="http://b.hatena.ne.jp/entry/http://d.hatena.ne.jp/over80/20140830/localvimrc" class="bookmark-icon"><img src="./localvimrc_ ディレクトリごとに別の .vimrc を適用する - 玉虫色に染まれ！_files/b_entry_wh.gif" border="0" title=" localvimrc: ディレクトリごとに別の .vimrc を適用するを含むブックマーク" alt=" localvimrc: ディレクトリごとに別の .vimrc を適用するを含むブックマーク" width="16" height="12" class="icon"></a> <a href="http://b.hatena.ne.jp/entry/http://d.hatena.ne.jp/over80/20140830/localvimrc" class="bookmark-count"><img src="./localvimrc_ ディレクトリごとに別の .vimrc を適用する - 玉虫色に染まれ！_files/localvimrc" title="はてなブックマーク -  localvimrc: ディレクトリごとに別の .vimrc を適用する" alt=""></a> <img class="hatena-bcomment-view-icon" src="./localvimrc_ ディレクトリごとに別の .vimrc を適用する - 玉虫色に染まれ！_files/popup.gif" onclick="javascript:BookmarkCommentViewer.iconImageClickHandler(this, &#39;http://d.hatena.ne.jp/over80/20140830/localvimrc&#39;, event);" title=" localvimrc: ディレクトリごとに別の .vimrc を適用するのブックマークコメント" alt=" localvimrc: ディレクトリごとに別の .vimrc を適用するのブックマークコメント" width="13" height="13"></p>
+
+		</div>
+
+<div id="google_afc_user_1" class="section">
+<div id="google_ads_iframe_/4374287/rectarectanglematch_attype_1_0__container__" style="border: 0pt none; display: none;"><iframe id="google_ads_iframe_/4374287/rectarectanglematch_attype_1_0" title="3rd party ad content" name="google_ads_iframe_/4374287/rectarectanglematch_attype_1_0" width="300" height="250" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" src="javascript:&quot;&lt;html&gt;&lt;body style=&#39;background:transparent&#39;&gt;&lt;/body&gt;&lt;/html&gt;&quot;" style="border: 0px; vertical-align: bottom;" src="./localvimrc_ ディレクトリごとに別の .vimrc を適用する - 玉虫色に染まれ！_files/saved_resource(2).html"></iframe></div><iframe id="google_ads_iframe_/4374287/rectarectanglematch_attype_1_0__hidden__" title="" name="google_ads_iframe_/4374287/rectarectanglematch_attype_1_0__hidden__" width="0" height="0" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" src="javascript:&quot;&lt;html&gt;&lt;body style=&#39;background:transparent&#39;&gt;&lt;/body&gt;&lt;/html&gt;&quot;" style="border: 0px; vertical-align: bottom; visibility: hidden; display: none;" src="./localvimrc_ ディレクトリごとに別の .vimrc を適用する - 玉虫色に染まれ！_files/saved_resource(3).html"></iframe><iframe id="ox_8233452955_538493889" name="ox_8233452955_538493889" width="300" height="250" framespacing="0" frameborder="no" scrolling="no" src="./localvimrc_ ディレクトリごとに別の .vimrc を適用する - 玉虫色に染まれ！_files/saved_resource(4).html"></iframe></div>
+<script>
+  var hatenadfp = hatenadfp || {};
+  hatenadfp.adUnits = hatenadfp.adUnits || [];
+  hatenadfp.adUnits.push(
+    { unitName: 'diary_user', size: [[300, 250], [336, 280]], divId: 'google_afc_user_1', allowContentMatch: true }
+  );
+  hatenadfp.isNGContent = false;
+</script>
+
+<!-- google_ad_section_end -->
+<!-- rakuten_ad_target_end -->
+
+<div class="ad">
+
+<script type="text/javascript"><!--
+google_ad_client = "pub-4438296558807254";
+google_alternate_ad_url = "http://d.hatena.ne.jp/altad?mode=468x60&color_border=ffffff&color_ads=ffffff";
+google_ad_width = 468;
+google_ad_height = 60;
+google_ad_format = "468x60_as";
+google_ad_type = "text";
+google_ad_channel ="5901068518";
+google_color_link = "0000FF";
+google_color_url = "008000";
+google_color_border = "FFFFFF";
+google_color_bg = "FFFFFF";
+google_color_text = "000000";
+//--></script>
+<script type="text/javascript" src="./localvimrc_ ディレクトリごとに別の .vimrc を適用する - 玉虫色に染まれ！_files/show_ads.js">
+</script><ins id="aswift_0_expand" style="display:inline-table;border:none;height:60px;margin:0;padding:0;position:relative;visibility:visible;width:468px;background-color:transparent"><ins id="aswift_0_anchor" style="display:block;border:none;height:60px;margin:0;padding:0;position:relative;visibility:visible;width:468px;background-color:transparent"><iframe width="468" height="60" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;" src="./localvimrc_ ディレクトリごとに別の .vimrc を適用する - 玉虫色に染まれ！_files/saved_resource(5).html"></iframe></ins></ins>
+
+</div>
+
+<div class="ad">
+<div class="hatena-asin-recommend">
+<div class="hatena-asin-recommend-item-1">
+<div class="hatena-asin-recommend-image"><a href="http://d.hatena.ne.jp/asin/4844317210"><img src="./localvimrc_ ディレクトリごとに別の .vimrc を適用する - 玉虫色に染まれ！_files/51MQAYG70TL._SL60_.jpg" alt="4844317210"></a></div>
+<div class="hatena-asin-recommend-info">
+<div class="hatena-asin-recommend-title"><a href="http://d.hatena.ne.jp/asin/4844317210"><img src="./localvimrc_ ディレクトリごとに別の .vimrc を適用する - 玉虫色に染まれ！_files/icon-book.gif" border="0" align="left" alt="Book"> Rubyソースコード完全解説</a></div>
+<div class="hatena-asin-recommend-description">
+  <a href="http://d.hatena.ne.jp/keyword/%A5%A4%A5%F3%A5%D7%A5%EC%A5%B9">インプレス</a> <a href="http://d.hatena.ne.jp/keyword/%C0%C4%CC%DA%CA%F6%CF%BA">青木峰郎</a> <a href="http://d.hatena.ne.jp/keyword/%A4%DE%A4%C4%A4%E2%A4%C8%A4%E6%A4%AD%A4%D2%A4%ED">まつもとゆきひろ</a> <br>
+  購入: 1人 クリック: 339回
+</div>
+</div></div>
+<div class="hatena-asin-recommend-item-2">
+<div class="hatena-asin-recommend-image"><a href="http://d.hatena.ne.jp/asin/B000R8MY9K"><img src="./localvimrc_ ディレクトリごとに別の .vimrc を適用する - 玉虫色に染まれ！_files/51xAgA1swsL._SL60_.jpg" alt="B000R8MY9K"></a></div>
+<div class="hatena-asin-recommend-info">
+<div class="hatena-asin-recommend-title"><a href="http://d.hatena.ne.jp/asin/B000R8MY9K"><img src="./localvimrc_ ディレクトリごとに別の .vimrc を適用する - 玉虫色に染まれ！_files/gif" border="0" align="left" alt="Speakers"> ヤザワ プラグインスピーカー VRS202W</a></div>
+<div class="hatena-asin-recommend-description">
+  <a href="http://d.hatena.ne.jp/keyword/Yazawa">Yazawa</a> <br>
+  購入: 4人 クリック: 29回
+</div>
+</div></div>
+<div class="hatena-asin-recommend-foot"></div></div></div>
+
+
+</div>
+
+<form id="comment-form" method="post" action="http://d.hatena.ne.jp/over80/comment#c" class="comment">
+<input type="hidden" name="mode" value="enter">
+<input type="hidden" name="rkm" value="">
+<input type="hidden" name="date" value="2014-08-30">
+<div class="comment">
+  <div class="caption"><a name="c">コメントを書く</a></div>
+  <div class="commentshort">
+    
+    
+
+    <a name="error-message"></a>
+    <p class="message" style="display: none; padding: 3px;"></p>
+
+    
+
+    
+            
+    <p class="commentform">
+      <span class="commentator">
+        <span class="usermailconfirm"><input name="usermail" size="1" value=""><input name="userurl" size="1" value="">スパム対策のためのダミーです。もし見えても何も入力しないでください<br></span>
+        <span class="username">
+        <img src="./localvimrc_ ディレクトリごとに別の .vimrc を適用する - 玉虫色に染まれ！_files/guest_icon.gif" class="hatena-id-icon" alt="ゲスト" title="ゲスト" height="16" width="16">
+        <input type="hidden" name="section" value="localvimrc">
+        
+          <input id="comment-username" name="username" size="15" style="color: rgb(170, 170, 170);">
+        
+        </span>
+        
+          <span class="usermail"><img src="./localvimrc_ ディレクトリごとに別の .vimrc を適用する - 玉虫色に染まれ！_files/icon-usermail.gif" style="vertical-align:middle;margin-right:3px;"><input id="comment-usermail" name="useremail" size="15" value="" style="color: rgb(170, 170, 170);"></span>
+          <span class="userurl"><img src="./localvimrc_ ディレクトリごとに別の .vimrc を適用する - 玉虫色に染まれ！_files/icon-userurl.gif" style="vertical-align:middle;margin-right:3px;"><input id="comment-userurl" name="useruri" size="15" value="" style="color: rgb(170, 170, 170);"></span>
+        
+      </span>
+<br>
+      <!-- NOT_VERIFIED_COMMENT_AUTH -->
+      <textarea id="comment-textarea" name="body" value="" cols="60" rows="3" style="color: rgb(170, 170, 170);"></textarea><br>
+      
+          </p><div class="captcha">
+            <img src="./localvimrc_ ディレクトリごとに別の .vimrc を適用する - 玉虫色に染まれ！_files/captcha" class="captcha-image">
+            <span class="captcha-message">画像認証</span><br>
+            <input type="text" name="captcha_code" size="10" class="captcha-string" id="comment-captcha" style="color: rgb(170, 170, 170);">
+          </div>
+      
+      <span class="comment-submit"><input type="submit" id="comment-form-button" value="投稿"></span>
+    <p></p>
+
+      <script type="text/javascript" src="./localvimrc_ ディレクトリごとに別の .vimrc を適用する - 玉虫色に染まれ！_files/diary_comment_edit_form.js"></script>
+    
+
+  </div>
+</div>
+
+</form>
+
+
+
+
+
+  
+  <div class="refererlist">
+    <div class="caption">
+      <a name="tb">トラックバック</a> - http://d.hatena.ne.jp/over80/20140830/localvimrc
+    </div>
+    
+  </div>
+  
+  
+  
+  <div id="diary-pc-trackback-rectangle" style="margin-bottom: 15px;"><div id="google_ads_iframe_/4374287/diary_user_track_0__container__" style="border: 0pt none; display: inline-block; width: 336px; height: 280px;"><iframe frameborder="0" src="./localvimrc_ ディレクトリごとに別の .vimrc を適用する - 玉虫色に染まれ！_files/container.html" id="google_ads_iframe_/4374287/diary_user_track_0" title="3rd party ad content" name="1-0-4;40178;&lt;!doctype html&gt;&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body leftMargin=&quot;0&quot; topMargin=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot;&gt;&lt;script&gt;(function(){var g=this,l=function(a,b){var c=a.split(&quot;.&quot;),d=g;c[0]in d||!d.execScript||d.execScript(&quot;var &quot;+c[0]);for(var e;c.length&amp;&amp;(e=c.shift());)c.length||void 0===b?d=d[e]?d[e]:d[e]={}:d[e]=b},m=function(a,b,c){return a.call.apply(a.bind,arguments)},n=function(a,b,c){if(!a)throw Error();if(2&lt;arguments.length){var d=Array.prototype.slice.call(arguments,2);return function(){var c=Array.prototype.slice.call(arguments);Array.prototype.unshift.apply(c,d);return a.apply(b,c)}}return function(){return a.apply(b,arguments)}},p=function(a,b,c){p=Function.prototype.bind&amp;&amp;-1!=Function.prototype.bind.toString().indexOf(&quot;native code&quot;)?m:n;return p.apply(null,arguments)},q=Date.now||function(){return+new Date};var r=document,s=window;var t=function(a,b){for(var c in a)Object.prototype.hasOwnProperty.call(a,c)&amp;&amp;b.call(null,a[c],c,a)},w=function(a,b){a.google_image_requests||(a.google_image_requests=[]);var c=a.document.createElement(&quot;img&quot;);c.src=b;a.google_image_requests.push(c)};var x=function(a){return{visible:1,hidden:2,prerender:3,preview:4}[a.webkitVisibilityState||a.mozVisibilityState||a.visibilityState||&quot;&quot;]||0},y=function(a){var b;a.mozVisibilityState?b=&quot;mozvisibilitychange&quot;:a.webkitVisibilityState?b=&quot;webkitvisibilitychange&quot;:a.visibilityState&amp;&amp;(b=&quot;visibilitychange&quot;);return b};var C=function(){this.g=r;this.k=s;this.j=!1;this.i=null;this.h=[];this.o={};if(z)this.i=q();else if(3==x(this.g)){this.i=q();var a=p(this.q,this);A&amp;&amp;(a=A(&quot;di::vch&quot;,a));this.p=a;var b=this.g,c=y(this.g);b.addEventListener?b.addEventListener(c,a,!1):b.attachEvent&amp;&amp;b.attachEvent(&quot;on&quot;+c,a)}else B(this)},A;C.m=function(){return C.n?C.n:C.n=new C};var D=/^([^:]+:\/\/[^/]+)/m,G=/^\d*,(.+)$/m,z=!1,B=function(a){if(!a.j){a.j=!0;for(var b=0;b&lt;a.h.length;++b)a.l.apply(a,a.h[b]);a.h=[]}};C.prototype.s=function(a,b){var c=b.target.u();(c=G.exec(c))&amp;&amp;(this.o[a]=c[1])};C.prototype.l=function(a,b){this.k.rvdt=this.i?q()-this.i:0;var c;if(c=this.t)t:{try{var d=D.exec(this.k.location.href),e=D.exec(a);if(d&amp;&amp;e&amp;&amp;d[1]==e[1]&amp;&amp;b){var f=p(this.s,this,b);this.t(a,f);c=!0;break t}}catch(u){}c=!1}c||w(this.k,a)};C.prototype.q=function(){if(3!=x(this.g)){B(this);var a=this.g,b=y(this.g),c=this.p;a.removeEventListener?a.removeEventListener(b,c,!1):a.detachEvent&amp;&amp;a.detachEvent(&quot;on&quot;+b,c)}};var H=/^true$/.test(&quot;&quot;)?!0:!1;var I={},J=function(a){var b=a.toString();a.name&amp;&amp;-1==b.indexOf(a.name)&amp;&amp;(b+=&quot;: &quot;+a.name);a.message&amp;&amp;-1==b.indexOf(a.message)&amp;&amp;(b+=&quot;: &quot;+a.message);if(a.stack){a=a.stack;var c=b;try{-1==a.indexOf(c)&amp;&amp;(a=c+&quot;\n&quot;+a);for(var d;a!=d;)d=a,a=a.replace(/((https?:\/..*\/)[^\/:]*:\d+(?:.|\n)*)\2/,&quot;$1&quot;);b=a.replace(/\n */g,&quot;\n&quot;)}catch(e){b=c}}return b},M=function(a,b,c,d){var e=K,f,u=!0;try{f=b()}catch(h){try{var N=J(h);b=&quot;&quot;;h.fileName&amp;&amp;(b=h.fileName);var E=-1;h.lineNumber&amp;&amp;(E=h.lineNumber);var v;t:{try{v=c?c():&quot;&quot;;break t}catch(S){}v=&quot;&quot;}u=e(a,N,b,E,v)}catch(k){try{var O=J(k);a=&quot;&quot;;k.fileName&amp;&amp;(a=k.fileName);c=-1;k.lineNumber&amp;&amp;(c=k.lineNumber);K(&quot;pAR&quot;,O,a,c,void 0,void 0)}catch(F){L({context:&quot;mRE&quot;,msg:F.toString()+&quot;\n&quot;+(F.stack||&quot;&quot;)},void 0)}}if(!u)throw h;}finally{if(d)try{d()}catch(T){}}return f},K=function(a,b,c,d,e,f){a={context:a,msg:b.substring(0,512),eid:e&amp;&amp;e.substring(0,40),file:c,line:d.toString(),url:r.URL.substring(0,512),ref:r.referrer.substring(0,512)};P(a);L(a,f);return!0},L=function(a,b){try{if(Math.random()&lt;(b||.01)){var c=&quot;/pagead/gen_204?id=jserror&quot;+Q(a),d=&quot;http&quot;+(&quot;https:&quot;==s.location.protocol?&quot;s&quot;:&quot;&quot;)+&quot;://pagead2.googlesyndication.com&quot;+c,d=d.substring(0,2E3);w(s,d)}}catch(e){}},P=function(a){var b=a||{};t(I,function(a,d){b[d]=s[a]})},R=function(a,b,c,d,e){return function(){var f=arguments;return M(a,function(){return b.apply(c,f)},d,e)}},Q=function(a){var b=&quot;&quot;;t(a,function(a,d){if(0===a||a)b+=&quot;&amp;&quot;+d+&quot;=&quot;+(&quot;function&quot;==typeof encodeURIComponent?encodeURIComponent(a):escape(a))});return b};A=function(a,b,c,d){return R(a,b,void 0,c,d)};z=H;l(&quot;vu&quot;,R(&quot;vu&quot;,function(a,b){var c=a.replace(&quot;&amp;amp;&quot;,&quot;&amp;&quot;),d=/(google|doubleclick).*\/pagead\/adview/.test(c),e=C.m();if(d){d=&quot;&amp;vis=&quot;+x(e.g);b&amp;&amp;(d+=&quot;&amp;ve=1&quot;);var f=c.indexOf(&quot;&amp;adurl&quot;),c=-1==f?c+d:c.substring(0,f)+d+c.substring(f)}e.j?e.l(c,b):e.h.push([c,b])}));l(&quot;vv&quot;,R(&quot;vv&quot;,function(){z&amp;&amp;B(C.m())}));})();&lt;/script&gt;&lt;script&gt;vu(&quot;https://adx.g.doubleclick.net/pagead/adview?ai\x3dClWZarCB2V8zGOc7K9gXYp5nwBZ_JsbQG99_w14wBwI23ARABIABgiZvFhPQTggEXY2EtcHViLTU5NzM1MTk2MjQ5Njg1MzDIAQmpAjFQex8u4EQ-4AIAqAMBqgTHAU_QkFro_D2LDrc6oF6K6QG3a0JyrVPEL_7XcVwotO0uBDnxHWVo4LiuK8ry7twGSml9mo7b7r63XVvpqBq_VdWvK7BaIQvEyQoRoBrsTRCSDzpu4J9xzlL5cAzFySZHlEDthknAi0Qf-RpkpjY1Mbqg3t6hn0DsDBqDBjYnMp78bWzCsKS6p74cFuypxAYmfjN8PKzPp7YTkoxBR8VXocV_WnXWYBKZ5B2aBZO9o_E9zqYMOoCoX_PL1xTDutdfE9H0z20oVgPgBAGABuuK2bzV0cvBP6AGIagHpr4b2AcA\x26sigh\x3dtim_cEngrAU&quot;)&lt;/script&gt;&lt;iframe id=&#39;33b6fb4d&#39; name=&#39;33b6fb4d&#39; src=&#39;https://cas.jp.as.criteo.com/delivery/r/afr.php?did=577620acb87380baddef549742144160&amp;z=V3YgrAAOY0wKvaVOAAZT2CAG9IZkRB3brs4l1Q&amp;u=%7C6QdMu0td8ojUJPURDlkbOC%2B5ENrS6CzcX3%2Fh2dmdrTw%3D%7C&amp;c1=64huUomFIxtW-gyWCMuvLNH0wJ4FvNaYPUYw0ekbjR_Qye7UZyU-XnZB_6MgqW05i4Vqn6NTMaOuhnbG9m7ot5SHiYBv5K_B1NuLp3kv5eZktRtPaDWv_nMIwZwEuX8DAwfD7kEKmv5vMam8T-Ou7JsCqs1PVbbMyS2-rDUuzOIC6uP6b5MmTAu8F2LygMCdLE0x_ET6wJlqafJBisMmI8e7-Pr6G0Gchehhtl0YQlT5EL_fuFwdnD-T_JYCggEvB8akXQJC5iU&amp;ct0=https://adclick.g.doubleclick.net/aclk%3Fsa%3DL%26ai%3DClWZarCB2V8zGOc7K9gXYp5nwBZ_JsbQG99_w14wBwI23ARABIABgiZvFhPQTggEXY2EtcHViLTU5NzM1MTk2MjQ5Njg1MzDIAQmpAjFQex8u4EQ-4AIAqAMBqgTHAU_QkFro_D2LDrc6oF6K6QG3a0JyrVPEL_7XcVwotO0uBDnxHWVo4LiuK8ry7twGSml9mo7b7r63XVvpqBq_VdWvK7BaIQvEyQoRoBrsTRCSDzpu4J9xzlL5cAzFySZHlEDthknAi0Qf-RpkpjY1Mbqg3t6hn0DsDBqDBjYnMp78bWzCsKS6p74cFuypxAYmfjN8PKzPp7YTkoxBR8VXocV_WnXWYBKZ5B2aBZO9o_E9zqYMOoCoX_PL1xTDutdfE9H0z20oVgPgBAGABuuK2bzV0cvBP6AGIagHpr4b2AcA%26num%3D1%26sig%3DAOD64_3VOv9ylt3omRDFchTofCTZ23ucVA%26client%3Dca-pub-5973519624968530%26adurl%3D&#39; framespacing=&#39;0&#39; frameborder=&#39;no&#39; scrolling=&#39;no&#39; width=&#39;336&#39; height=&#39;280&#39;&gt;&lt;/iframe&gt;&lt;script&gt;(function(){var g,k=this,aa=function(a){var b=typeof a;if(&quot;object&quot;==b)if(a){if(a instanceof Array)return&quot;array&quot;;if(a instanceof Object)return b;var c=Object.prototype.toString.call(a);if(&quot;[object Window]&quot;==c)return&quot;object&quot;;if(&quot;[object Array]&quot;==c||&quot;number&quot;==typeof a.length&amp;&amp;&quot;undefined&quot;!=typeof a.splice&amp;&amp;&quot;undefined&quot;!=typeof a.propertyIsEnumerable&amp;&amp;!a.propertyIsEnumerable(&quot;splice&quot;))return&quot;array&quot;;if(&quot;[object Function]&quot;==c||&quot;undefined&quot;!=typeof a.call&amp;&amp;&quot;undefined&quot;!=typeof a.propertyIsEnumerable&amp;&amp;!a.propertyIsEnumerable(&quot;call&quot;))return&quot;function&quot;}else return&quot;null&quot;;else if(&quot;function&quot;==b&amp;&amp;&quot;undefined&quot;==typeof a.call)return&quot;object&quot;;return b},l=function(a){var b=aa(a);return&quot;array&quot;==b||&quot;object&quot;==b&amp;&amp;&quot;number&quot;==typeof a.length},m=function(a){return&quot;string&quot;==typeof a},ba=function(a,b,c){return a.call.apply(a.bind,arguments)},ca=function(a,b,c){if(!a)throw Error();if(2&lt;arguments.length){var d=Array.prototype.slice.call(arguments,2);return function(){var c=Array.prototype.slice.call(arguments);Array.prototype.unshift.apply(c,d);return a.apply(b,c)}}return function(){return a.apply(b,arguments)}},p=function(a,b,c){p=Function.prototype.bind&amp;&amp;-1!=Function.prototype.bind.toString().indexOf(&quot;native code&quot;)?ba:ca;return p.apply(null,arguments)},da=Date.now||function(){return+new Date};var ea=String.prototype.trim?function(a){return a.trim()}:function(a){return a.replace(/^[\s\xa0]+|[\s\xa0]+$/g,&quot;&quot;)},q=function(a,b){return-1!=a.indexOf(b)},r=function(a,b){return a&lt;b?-1:a&gt;b?1:0};var fa=Array.prototype.forEach?function(a,b,c){Array.prototype.forEach.call(a,b,c)}:function(a,b,c){for(var d=a.length,e=m(a)?a.split(&quot;&quot;):a,f=0;f&lt;d;f++)f in e&amp;&amp;b.call(c,e[f],f,a)},ga=function(a){return Array.prototype.concat.apply(Array.prototype,arguments)},ha=function(a){var b=a.length;if(0&lt;b){for(var c=Array(b),d=0;d&lt;b;d++)c[d]=a[d];return c}return[]};var ia=function(a){var b=[],c=0,d;for(d in a)b[c++]=a[d];return b},ka=function(a){var b=[],c=0,d;for(d in a)b[c++]=d;return b};var t;a:{var la=k.navigator;if(la){var ma=la.userAgent;if(ma){t=ma;break a}}t=&quot;&quot;};var na=q(t,&quot;Opera&quot;),u=q(t,&quot;Trident&quot;)||q(t,&quot;MSIE&quot;),oa=q(t,&quot;Edge&quot;),v=q(t,&quot;Gecko&quot;)&amp;&amp;!(q(t.toLowerCase(),&quot;webkit&quot;)&amp;&amp;!q(t,&quot;Edge&quot;))&amp;&amp;!(q(t,&quot;Trident&quot;)||q(t,&quot;MSIE&quot;))&amp;&amp;!q(t,&quot;Edge&quot;),pa=q(t.toLowerCase(),&quot;webkit&quot;)&amp;&amp;!q(t,&quot;Edge&quot;),qa=function(){var a=k.document;return a?a.documentMode:void 0},w;a:{var x=&quot;&quot;,y=function(){var a=t;if(v)return/rv\:([^\);]+)(\)|;)/.exec(a);if(oa)return/Edge\/([\d\.]+)/.exec(a);if(u)return/\b(?:MSIE|rv)[: ]([^\);]+)(\)|;)/.exec(a);if(pa)return/WebKit\/(\S+)/.exec(a);if(na)return/(?:Version)[ \/]?(\S+)/.exec(a)}();y&amp;&amp;(x=y?y[1]:&quot;&quot;);if(u){var z=qa();if(null!=z&amp;&amp;z&gt;parseFloat(x)){w=String(z);break a}}w=x}var ra=w,sa={},ta=function(a){if(!sa[a]){for(var b=0,c=ea(String(ra)).split(&quot;.&quot;),d=ea(String(a)).split(&quot;.&quot;),e=Math.max(c.length,d.length),f=0;0==b&amp;&amp;f&lt;e;f++){var h=c[f]||&quot;&quot;,n=d[f]||&quot;&quot;,U=RegExp(&quot;(\\d*)(\\D*)&quot;,&quot;g&quot;),Aa=RegExp(&quot;(\\d*)(\\D*)&quot;,&quot;g&quot;);do{var E=U.exec(h)||[&quot;&quot;,&quot;&quot;,&quot;&quot;],F=Aa.exec(n)||[&quot;&quot;,&quot;&quot;,&quot;&quot;];if(0==E[0].length&amp;&amp;0==F[0].length)break;b=r(0==E[1].length?0:parseInt(E[1],10),0==F[1].length?0:parseInt(F[1],10))||r(0==E[2].length,0==F[2].length)||r(E[2],F[2])}while(0==b)}sa[a]=0&lt;=b}},ua=k.document,va=ua&amp;&amp;u?qa()||(&quot;CSS1Compat&quot;==ua.compatMode?parseInt(ra,10):5):void 0;var A;if(!(A=!v&amp;&amp;!u)){var B;if(B=u)B=9&lt;=Number(va);A=B}A||v&amp;&amp;ta(&quot;1.9.1&quot;);u&amp;&amp;ta(&quot;9&quot;);var wa=function(a,b,c){a.addEventListener?a.addEventListener(b,c,!1):a.attachEvent&amp;&amp;a.attachEvent(&quot;on&quot;+b,c)};var xa=/^(?:([^:/?#.]+):)?(?:\/\/(?:([^/?#]*)@)?([^/#?]*?)(?::([0-9]+))?(?=[/#?]|$))?([^?#]+)?(?:\?([^#]*))?(?:#(.*))?$/,ya=function(a,b){if(a)for(var c=a.split(&quot;&amp;&quot;),d=0;d&lt;c.length;d++){var e=c[d].indexOf(&quot;=&quot;),f,h=null;0&lt;=e?(f=c[d].substring(0,e),h=c[d].substring(e+1)):f=c[d];b(f,h?decodeURIComponent(h.replace(/\+/g,&quot; &quot;)):&quot;&quot;)}};var C=document,D=window;var za=&quot;StopIteration&quot;in k?k.StopIteration:{message:&quot;StopIteration&quot;,stack:&quot;&quot;},G=function(){};G.prototype.next=function(){throw za;};G.prototype.X=function(){return this};var H=function(a,b){this.o={};this.i=[];this.I=this.h=0;var c=arguments.length;if(1&lt;c){if(c%2)throw Error(&quot;Uneven number of arguments&quot;);for(var d=0;d&lt;c;d+=2)this.set(arguments[d],arguments[d+1])}else a&amp;&amp;this.addAll(a)};g=H.prototype;g.m=function(){I(this);for(var a=[],b=0;b&lt;this.i.length;b++)a.push(this.o[this.i[b]]);return a};g.w=function(){I(this);return this.i.concat()};g.G=function(a){return J(this.o,a)};g.clear=function(){this.o={};this.I=this.h=this.i.length=0};g.remove=function(a){return J(this.o,a)?(delete this.o[a],this.h--,this.I++,this.i.length&gt;2*this.h&amp;&amp;I(this),!0):!1};var I=function(a){if(a.h!=a.i.length){for(var b=0,c=0;b&lt;a.i.length;){var d=a.i[b];J(a.o,d)&amp;&amp;(a.i[c++]=d);b++}a.i.length=c}if(a.h!=a.i.length){for(var e={},c=b=0;b&lt;a.i.length;)d=a.i[b],J(e,d)||(a.i[c++]=d,e[d]=1),b++;a.i.length=c}};g=H.prototype;g.get=function(a,b){return J(this.o,a)?this.o[a]:b};g.set=function(a,b){J(this.o,a)||(this.h++,this.i.push(a),this.I++);this.o[a]=b};g.addAll=function(a){var b;a instanceof H?(b=a.w(),a=a.m()):(b=ka(a),a=ia(a));for(var c=0;c&lt;b.length;c++)this.set(b[c],a[c])};g.forEach=function(a,b){for(var c=this.w(),d=0;d&lt;c.length;d++){var e=c[d],f=this.get(e);a.call(b,f,e,this)}};g.clone=function(){return new H(this)};g.X=function(a){I(this);var b=0,c=this.I,d=this,e=new G;e.next=function(){if(c!=d.I)throw Error(&quot;The map has changed since the iterator was created&quot;);if(b&gt;=d.i.length)throw za;var e=d.i[b++];return a?e:d.o[e]};return e};var J=function(a,b){return Object.prototype.hasOwnProperty.call(a,b)};var Ba=function(a){if(a.m&amp;&amp;&quot;function&quot;==typeof a.m)return a.m();if(m(a))return a.split(&quot;&quot;);if(l(a)){for(var b=[],c=a.length,d=0;d&lt;c;d++)b.push(a[d]);return b}return ia(a)},Ca=function(a,b,c){if(a.forEach&amp;&amp;&quot;function&quot;==typeof a.forEach)a.forEach(b,c);else if(l(a)||m(a))fa(a,b,c);else{var d;if(a.w&amp;&amp;&quot;function&quot;==typeof a.w)d=a.w();else if(a.m&amp;&amp;&quot;function&quot;==typeof a.m)d=void 0;else if(l(a)||m(a)){d=[];for(var e=a.length,f=0;f&lt;e;f++)d.push(f)}else d=ka(a);for(var e=Ba(a),f=e.length,h=0;h&lt;f;h++)b.call(c,e[h],d&amp;&amp;d[h],a)}};var K=function(a,b){this.u=this.C=this.A=&quot;&quot;;this.F=null;this.B=this.s=&quot;&quot;;this.l=this.ba=!1;var c;if(a instanceof K)this.l=void 0!==b?b:a.l,L(this,a.A),c=a.C,M(this),this.C=c,c=a.u,M(this),this.u=c,N(this,a.F),c=a.s,M(this),this.s=c,Da(this,a.v.clone()),c=a.B,M(this),this.B=c;else if(a&amp;&amp;(c=String(a).match(xa))){this.l=!!b;L(this,c[1]||&quot;&quot;,!0);var d=c[2]||&quot;&quot;;M(this);this.C=O(d);d=c[3]||&quot;&quot;;M(this);this.u=O(d,!0);N(this,c[4]);d=c[5]||&quot;&quot;;M(this);this.s=O(d,!0);Da(this,c[6]||&quot;&quot;,!0);c=c[7]||&quot;&quot;;M(this);this.B=O(c)}else this.l=!!b,this.v=new P(null,0,this.l)};K.prototype.toString=function(){var a=[],b=this.A;b&amp;&amp;a.push(Q(b,Ea,!0),&quot;:&quot;);var c=this.u;if(c||&quot;file&quot;==b)a.push(&quot;//&quot;),(b=this.C)&amp;&amp;a.push(Q(b,Ea,!0),&quot;@&quot;),a.push(encodeURIComponent(String(c)).replace(/%25([0-9a-fA-F]{2})/g,&quot;%$1&quot;)),c=this.F,null!=c&amp;&amp;a.push(&quot;:&quot;,String(c));if(c=this.s)this.u&amp;&amp;&quot;/&quot;!=c.charAt(0)&amp;&amp;a.push(&quot;/&quot;),a.push(Q(c,&quot;/&quot;==c.charAt(0)?Fa:Ga,!0));(c=this.v.toString())&amp;&amp;a.push(&quot;?&quot;,c);(c=this.B)&amp;&amp;a.push(&quot;#&quot;,Q(c,Ha));return a.join(&quot;&quot;)};K.prototype.resolve=function(a){var b=this.clone(),c=!!a.A;c?L(b,a.A):c=!!a.C;if(c){var d=a.C;M(b);b.C=d}else c=!!a.u;c?(d=a.u,M(b),b.u=d):c=null!=a.F;d=a.s;if(c)N(b,a.F);else if(c=!!a.s){if(&quot;/&quot;!=d.charAt(0))if(this.u&amp;&amp;!this.s)d=&quot;/&quot;+d;else{var e=b.s.lastIndexOf(&quot;/&quot;);-1!=e&amp;&amp;(d=b.s.substr(0,e+1)+d)}e=d;if(&quot;..&quot;==e||&quot;.&quot;==e)d=&quot;&quot;;else if(q(e,&quot;./&quot;)||q(e,&quot;/.&quot;)){for(var d=0==e.lastIndexOf(&quot;/&quot;,0),e=e.split(&quot;/&quot;),f=[],h=0;h&lt;e.length;){var n=e[h++];&quot;.&quot;==n?d&amp;&amp;h==e.length&amp;&amp;f.push(&quot;&quot;):&quot;..&quot;==n?((1&lt;f.length||1==f.length&amp;&amp;&quot;&quot;!=f[0])&amp;&amp;f.pop(),d&amp;&amp;h==e.length&amp;&amp;f.push(&quot;&quot;)):(f.push(n),d=!0)}d=f.join(&quot;/&quot;)}else d=e}c?(M(b),b.s=d):c=&quot;&quot;!==a.v.toString();c?Da(b,O(a.v.toString())):c=!!a.B;c&amp;&amp;(a=a.B,M(b),b.B=a);return b};K.prototype.clone=function(){return new K(this)};var L=function(a,b,c){M(a);a.A=c?O(b,!0):b;a.A&amp;&amp;(a.A=a.A.replace(/:$/,&quot;&quot;))},N=function(a,b){M(a);if(b){b=Number(b);if(isNaN(b)||0&gt;b)throw Error(&quot;Bad port number &quot;+b);a.F=b}else a.F=null},Da=function(a,b,c){M(a);b instanceof P?(a.v=b,a.v.O(a.l)):(c||(b=Q(b,Ia)),a.v=new P(b,0,a.l))},M=function(a){if(a.ba)throw Error(&quot;Tried to modify a read-only Uri&quot;);};K.prototype.O=function(a){this.l=a;this.v&amp;&amp;this.v.O(a);return this};var O=function(a,b){return a?b?decodeURI(a.replace(/%25/g,&quot;%2525&quot;)):decodeURIComponent(a):&quot;&quot;},Q=function(a,b,c){return m(a)?(a=encodeURI(a).replace(b,Ja),c&amp;&amp;(a=a.replace(/%25([0-9a-fA-F]{2})/g,&quot;%$1&quot;)),a):null},Ja=function(a){a=a.charCodeAt(0);return&quot;%&quot;+(a&gt;&gt;4&amp;15).toString(16)+(a&amp;15).toString(16)},Ea=/[#\/\?@]/g,Ga=/[\#\?:]/g,Fa=/[\#\?]/g,Ia=/[\#\?@]/g,Ha=/#/g,P=function(a,b,c){this.h=this.g=null;this.j=a||null;this.l=!!c},R=function(a){a.g||(a.g=new H,a.h=0,a.j&amp;&amp;ya(a.j,function(b,c){a.add(decodeURIComponent(b.replace(/\+/g,&quot; &quot;)),c)}))};g=P.prototype;g.add=function(a,b){R(this);this.j=null;a=S(this,a);var c=this.g.get(a);c||this.g.set(a,c=[]);c.push(b);this.h+=1;return this};g.remove=function(a){R(this);a=S(this,a);return this.g.G(a)?(this.j=null,this.h-=this.g.get(a).length,this.g.remove(a)):!1};g.clear=function(){this.g=this.j=null;this.h=0};g.G=function(a){R(this);a=S(this,a);return this.g.G(a)};g.w=function(){R(this);for(var a=this.g.m(),b=this.g.w(),c=[],d=0;d&lt;b.length;d++)for(var e=a[d],f=0;f&lt;e.length;f++)c.push(b[d]);return c};g.m=function(a){R(this);var b=[];if(m(a))this.G(a)&amp;&amp;(b=ga(b,this.g.get(S(this,a))));else{a=this.g.m();for(var c=0;c&lt;a.length;c++)b=ga(b,a[c])}return b};g.set=function(a,b){R(this);this.j=null;a=S(this,a);this.G(a)&amp;&amp;(this.h-=this.g.get(a).length);this.g.set(a,[b]);this.h+=1;return this};g.get=function(a,b){var c=a?this.m(a):[];return 0&lt;c.length?String(c[0]):b};g.toString=function(){if(this.j)return this.j;if(!this.g)return&quot;&quot;;for(var a=[],b=this.g.w(),c=0;c&lt;b.length;c++)for(var d=b[c],e=encodeURIComponent(String(d)),d=this.m(d),f=0;f&lt;d.length;f++){var h=e;&quot;&quot;!==d[f]&amp;&amp;(h+=&quot;=&quot;+encodeURIComponent(String(d[f])));a.push(h)}return this.j=a.join(&quot;&amp;&quot;)};g.clone=function(){var a=new P;a.j=this.j;this.g&amp;&amp;(a.g=this.g.clone(),a.h=this.h);return a};var S=function(a,b){var c=String(b);a.l&amp;&amp;(c=c.toLowerCase());return c};P.prototype.O=function(a){a&amp;&amp;!this.l&amp;&amp;(R(this),this.j=null,this.g.forEach(function(a,c){var d=c.toLowerCase();c!=d&amp;&amp;(this.remove(c),this.remove(d),0&lt;a.length&amp;&amp;(this.j=null,this.g.set(S(this,d),ha(a)),this.h+=a.length))},this));this.l=a};P.prototype.extend=function(a){for(var b=0;b&lt;arguments.length;b++)Ca(arguments[b],function(a,b){this.add(b,a)},this)};var W=function(a,b,c,d,e,f,h,n,U){T(C.hidden)?(this.H=&quot;hidden&quot;,this.K=&quot;visibilitychange&quot;):T(C.mozHidden)?(this.H=&quot;mozHidden&quot;,this.K=&quot;mozvisibilitychange&quot;):T(C.msHidden)?(this.H=&quot;msHidden&quot;,this.K=&quot;msvisibilitychange&quot;):T(C.webkitHidden)&amp;&amp;(this.H=&quot;webkitHidden&quot;,this.K=&quot;webkitvisibilitychange&quot;);this.M=!1;this.D=a;this.J=-1;this.V=b;this.W=c;this.ca=d;this.Z=f;this.S=h?&quot;mousedown&quot;:&quot;click&quot;;e&amp;&amp;C[this.H]&amp;&amp;V(this,2);this.$=n;this.Y=U||0;this.P=this.T=this.L=this.R=null;a=p(this.aa,this);wa(C,this.K,a);Ka(this)};W.prototype.aa=function(){if(C[this.H])this.M&amp;&amp;(this.U(),this.J=da(),V(this,0));else{if(-1!=this.J){var a=da()-this.J;a&gt;this.Y&amp;&amp;(this.J=-1,V(this,1,a),null!==this.D&amp;&amp;this.D.registerFinalizeCallback(p(this.D.fireOnObject,this.D,&quot;attempt_survey_trigger&quot;,[&quot;wfocus&quot;,this.W,this.V,this.L,this.T,this.P,a])))}this.Z&amp;&amp;V(this,3)}};var Ka=function(a){if(null!==a.D){var b=p(function(a,b,c){this.L=b.fa().ea();this.L||(a=new K(b.da()),this.L=a.u+a.s);this.T=b.creativeConversionUrl();this.P=b.adGroupCreativeId();this.N(c)},a),c=a.S;a.D.forEachAd(function(a){a.forEachNavigationAdPiece(function(d){a.listen(d,c,b)})})}else{var d=p(a.N,a);wa(D,a.S,d)}};W.prototype.N=function(a){this.R=a.button;this.M=!0;a=p(this.U,this);D.setTimeout(a,5E3)};W.prototype.handleClick=W.prototype.N;W.prototype.U=function(){this.M=!1};var V=function(a,b,c){var d=[&quot;//&quot;,a.ca?&quot;googleads.g.doubleclick.net&quot;:&quot;pagead2.googlesyndication.com&quot;,&quot;/pagead/gen_204?id=wfocus&quot;,&quot;&amp;gqid=&quot;+a.V,&quot;&amp;qqid=&quot;+a.W].join(&quot;&quot;);0==b&amp;&amp;(d+=&quot;&amp;return=0&quot;);1==b&amp;&amp;(d+=&quot;&amp;return=1&amp;timeDelta=&quot;+c,a.$&amp;&amp;(d+=&quot;&amp;cbtn=&quot;+a.R));2==b&amp;&amp;(d+=&quot;&amp;bgload=1&quot;);3==b&amp;&amp;(d+=&quot;&amp;fg=1&quot;);D.google_image_requests||(D.google_image_requests=[]);a=D.document.createElement(&quot;img&quot;);a.src=d;D.google_image_requests.push(a)},T=function(a){return&quot;undefined&quot;!==typeof a};var La=function(a,b,c,d,e,f,h,n){return new W(null,a,b,c,d,e,f,h,n)},X=[&quot;wfocusnhinit&quot;],Y=k;X[0]in Y||!Y.execScript||Y.execScript(&quot;var &quot;+X[0]);for(var Z;X.length&amp;&amp;(Z=X.shift());)X.length||void 0===La?Y=Y[Z]?Y[Z]:Y[Z]={}:Y[Z]=La;}).call(this);wfocusnhinit(&quot;rCB2V7HEOIyl9AWw5IqgCA&quot;,&quot;CMzM2-Dj0c0CFU6lvQod2FMGXg&quot;,true,true,true,false,false,0);&lt;/script&gt;&lt;iframe scrolling=&quot;no&quot; frameborder=0 height=0 width=0 src=&quot;https://cm.g.doubleclick.net/push?client=ca-pub-5973519624968530&quot; style=&quot;position:absolute&quot;&gt;&lt;/iframe&gt;&lt;script type=&quot;text/javascript&quot;&gt;(function(){var k=this,aa=function(a){var b=typeof a;if(&quot;object&quot;==b)if(a){if(a instanceof Array)return&quot;array&quot;;if(a instanceof Object)return b;var c=Object.prototype.toString.call(a);if(&quot;[object Window]&quot;==c)return&quot;object&quot;;if(&quot;[object Array]&quot;==c||&quot;number&quot;==typeof a.length&amp;&amp;&quot;undefined&quot;!=typeof a.splice&amp;&amp;&quot;undefined&quot;!=typeof a.propertyIsEnumerable&amp;&amp;!a.propertyIsEnumerable(&quot;splice&quot;))return&quot;array&quot;;if(&quot;[object Function]&quot;==c||&quot;undefined&quot;!=typeof a.call&amp;&amp;&quot;undefined&quot;!=typeof a.propertyIsEnumerable&amp;&amp;!a.propertyIsEnumerable(&quot;call&quot;))return&quot;function&quot;}else return&quot;null&quot;;else if(&quot;function&quot;==b&amp;&amp;&quot;undefined&quot;==typeof a.call)return&quot;object&quot;;return b},l=function(a){return&quot;string&quot;==typeof a},ba=function(a,b){var c=Array.prototype.slice.call(arguments,1);return function(){var b=c.slice();b.push.apply(b,arguments);return a.apply(this,b)}},p=Date.now||function(){return+new Date},q=function(a,b){var c=a.split(&quot;.&quot;),d=k;c[0]in d||!d.execScript||d.execScript(&quot;var &quot;+c[0]);for(var e;c.length&amp;&amp;(e=c.shift());)c.length||void 0===b?d=d[e]?d[e]:d[e]={}:d[e]=b};var ca=function(a,b,c,d,e){if(e)c=a+(&quot;&amp;&quot;+b+&quot;=&quot;+c);else{var f=&quot;&amp;&quot;+b+&quot;=&quot;,g=a.indexOf(f);0&gt;g?c=a+f+c:(g+=f.length,f=a.indexOf(&quot;&amp;&quot;,g),c=0&lt;=f?a.substring(0,g)+c+a.substring(f):a.substring(0,g)+c)}return 2E3&lt;c.length?void 0!==d?ca(a,b,d,void 0,e):a:c};var da=function(){var a=/[&amp;\?#]exk=([^&amp; ]+)/.exec(t.location.href);return a&amp;&amp;2==a.length?a[1]:null};var ea=String.prototype.trim?function(a){return a.trim()}:function(a){return a.replace(/^[\s\xa0]+|[\s\xa0]+$/g,&quot;&quot;)},ga=function(a,b){for(var c=0,d=ea(String(a)).split(&quot;.&quot;),e=ea(String(b)).split(&quot;.&quot;),f=Math.max(d.length,e.length),g=0;0==c&amp;&amp;g&lt;f;g++){var h=d[g]||&quot;&quot;,m=e[g]||&quot;&quot;,n=RegExp(&quot;(\\d*)(\\D*)&quot;,&quot;g&quot;),O=RegExp(&quot;(\\d*)(\\D*)&quot;,&quot;g&quot;);do{var u=n.exec(h)||[&quot;&quot;,&quot;&quot;,&quot;&quot;],r=O.exec(m)||[&quot;&quot;,&quot;&quot;,&quot;&quot;];if(0==u[0].length&amp;&amp;0==r[0].length)break;c=fa(0==u[1].length?0:parseInt(u[1],10),0==r[1].length?0:parseInt(r[1],10))||fa(0==u[2].length,0==r[2].length)||fa(u[2],r[2])}while(0==c)}return c},fa=function(a,b){return a&lt;b?-1:a&gt;b?1:0};var ha=function(a,b,c){if(&quot;array&quot;==aa(b))for(var d=0;d&lt;b.length;d++)ha(a,String(b[d]),c);else null!=b&amp;&amp;c.push(&quot;&amp;&quot;,a,&quot;&quot;===b?&quot;&quot;:&quot;=&quot;,encodeURIComponent(String(b)))},ia=function(a,b,c){for(c=c||0;c&lt;b.length;c+=2)ha(b[c],b[c+1],a);return a},ja=function(a,b){var c=2==arguments.length?ia([a],arguments[1],0):ia([a],arguments,1);if(c[1]){var d=c[0],e=d.indexOf(&quot;#&quot;);0&lt;=e&amp;&amp;(c.push(d.substr(e)),c[0]=d=d.substr(0,e));e=d.indexOf(&quot;?&quot;);0&gt;e?c[1]=&quot;?&quot;:e==d.length-1&amp;&amp;(c[1]=void 0)}return c.join(&quot;&quot;)};var ka=Array.prototype.indexOf?function(a,b,c){return Array.prototype.indexOf.call(a,b,c)}:function(a,b,c){c=null==c?0:0&gt;c?Math.max(0,a.length+c):c;if(l(a))return l(b)&amp;&amp;1==b.length?a.indexOf(b,c):-1;for(;c&lt;a.length;c++)if(c in a&amp;&amp;a[c]===b)return c;return-1},la=Array.prototype.forEach?function(a,b,c){Array.prototype.forEach.call(a,b,c)}:function(a,b,c){for(var d=a.length,e=l(a)?a.split(&quot;&quot;):a,f=0;f&lt;d;f++)f in e&amp;&amp;b.call(c,e[f],f,a)},ma=Array.prototype.map?function(a,b,c){return Array.prototype.map.call(a,b,c)}:function(a,b,c){for(var d=a.length,e=Array(d),f=l(a)?a.split(&quot;&quot;):a,g=0;g&lt;d;g++)g in f&amp;&amp;(e[g]=b.call(c,f[g],g,a));return e};var na=function(a,b){for(var c in a)b.call(void 0,a[c],c,a)},oa=function(a,b){return null!==a&amp;&amp;b in a};var v;a:{var pa=k.navigator;if(pa){var qa=pa.userAgent;if(qa){v=qa;break a}}v=&quot;&quot;}var w=function(a){return-1!=v.indexOf(a)},ua=function(a){for(var b=RegExp(&quot;(\\w[\\w ]+)/([^\\s]+)\\s*(?:\\((.*?)\\))?&quot;,&quot;g&quot;),c=[],d;d=b.exec(a);)c.push([d[1],d[2],d[3]||void 0]);return c};var va=function(){return w(&quot;Trident&quot;)||w(&quot;MSIE&quot;)},x=function(){return(w(&quot;Chrome&quot;)||w(&quot;CriOS&quot;))&amp;&amp;!w(&quot;Edge&quot;)},xa=function(){function a(a){var b;a:{b=d;for(var g=a.length,h=l(a)?a.split(&quot;&quot;):a,m=0;m&lt;g;m++)if(m in h&amp;&amp;b.call(void 0,h[m],m,a)){b=m;break a}b=-1}return c[0&gt;b?null:l(a)?a.charAt(b):a[b]]||&quot;&quot;}var b=v;if(va())return wa(b);var b=ua(b),c={};la(b,function(a){c[a[0]]=a[1]});var d=ba(oa,c);return w(&quot;Opera&quot;)?a([&quot;Version&quot;,&quot;Opera&quot;]):w(&quot;Edge&quot;)?a([&quot;Edge&quot;]):x()?a([&quot;Chrome&quot;,&quot;CriOS&quot;]):(b=b[2])&amp;&amp;b[1]||&quot;&quot;},wa=function(a){var b=/rv: *([\d\.]*)/.exec(a);if(b&amp;&amp;b[1])return b[1];var b=&quot;&quot;,c=/MSIE +([\d\.]+)/.exec(a);if(c&amp;&amp;c[1])if(a=/Trident\/(\d.\d)/.exec(a),&quot;7.0&quot;==c[1])if(a&amp;&amp;a[1])switch(a[1]){case &quot;4.0&quot;:b=&quot;8.0&quot;;break;case &quot;5.0&quot;:b=&quot;9.0&quot;;break;case &quot;6.0&quot;:b=&quot;10.0&quot;;break;case &quot;7.0&quot;:b=&quot;11.0&quot;}else b=&quot;7.0&quot;;else b=c[1];return b};var ya=function(a){ya[&quot; &quot;](a);return a};ya[&quot; &quot;]=function(){};var za=function(a,b){for(var c in a)Object.prototype.hasOwnProperty.call(a,c)&amp;&amp;b.call(void 0,a[c],c,a)},Ba=function(){var a=Aa;if(!a)return&quot;&quot;;var b=/.*[&amp;#?]google_debug(=[^&amp;]*)?(&amp;.*)?$/;try{var c=b.exec(decodeURIComponent(a));if(c)return c[1]&amp;&amp;1&lt;c[1].length?c[1].substring(1):&quot;true&quot;}catch(d){}return&quot;&quot;};var Ca=function(a,b){this.v=a;this.w=b},Da=function(a,b){this.url=a;this.m=!!b;this.depth=null};var Ea=function(a,b,c,d){a.addEventListener?a.addEventListener(b,c,d||!1):a.attachEvent&amp;&amp;a.attachEvent(&quot;on&quot;+b,c)};var Fa=function(a,b,c,d,e){this.o=c||4E3;this.g=a||&quot;&amp;&quot;;this.G=b||&quot;,$&quot;;this.h=void 0!==d?d:&quot;trn&quot;;this.P=e||null;this.l=!1;this.f={};this.L=0;this.c=[]},Ga=function(a,b){var c={};c[a]=b;return[c]},y=function(a,b,c,d){a.c.push(b);a.f[b]=Ga(c,d)},Ja=function(a,b,c,d){b=b+&quot;//&quot;+c+d;var e=Ha(a)-d.length-0;if(0&gt;e)return&quot;&quot;;a.c.sort(function(a,b){return a-b});d=null;c=&quot;&quot;;for(var f=0;f&lt;a.c.length;f++)for(var g=a.c[f],h=a.f[g],m=0;m&lt;h.length;m++){if(!e){d=null==d?g:d;break}var n=Ia(h[m],a.g,a.G);if(n){n=c+n;if(e&gt;=n.length){e-=n.length;b+=n;c=a.g;break}else a.l&amp;&amp;(c=e,n[c-1]==a.g&amp;&amp;--c,b+=n.substr(0,c),c=a.g,e=0);d=null==d?g:d}}f=&quot;&quot;;a.h&amp;&amp;null!=d&amp;&amp;(f=c+a.h+&quot;=&quot;+(a.P||d));return b+f+&quot;&quot;},Ha=function(a){if(!a.h)return a.o;var b=1,c;for(c in a.f)b=c.length&gt;b?c.length:b;return a.o-a.h.length-b-a.g.length-1},Ia=function(a,b,c,d,e){var f=[];za(a,function(a,h){var m=Ka(a,b,c,d,e);m&amp;&amp;f.push(h+&quot;=&quot;+m)});return f.join(b)},Ka=function(a,b,c,d,e){if(null==a)return&quot;&quot;;b=b||&quot;&amp;&quot;;c=c||&quot;,$&quot;;&quot;string&quot;==typeof c&amp;&amp;(c=c.split(&quot;&quot;));if(a instanceof Array){if(d=d||0,d&lt;c.length){for(var f=[],g=0;g&lt;a.length;g++)f.push(Ka(a[g],b,c,d+1,e));return f.join(c[d])}}else if(&quot;object&quot;==typeof a)return e=e||0,2&gt;e?encodeURIComponent(Ia(a,b,c,d,e+1)):&quot;...&quot;;return encodeURIComponent(String(a))};var La=function(a,b,c,d,e){try{var f;c instanceof Fa?f=c:(f=new Fa,za(c,function(a,b){var c=f,d=c.L++,e=Ga(b,a);c.c.push(d);c.f[d]=e}));if((d?a.O:Math.random())&lt;(e||a.H)){var g=Ja(f,a.N,a.I,a.M+b+&quot;&amp;&quot;);z(k,g)}}catch(h){}},z=function(a,b,c){a.google_image_requests||(a.google_image_requests=[]);var d=a.document.createElement(&quot;img&quot;);if(c){var e=function(a){c(a);a=e;d.removeEventListener?d.removeEventListener(&quot;load&quot;,a,!1):d.detachEvent&amp;&amp;d.detachEvent(&quot;onload&quot;,a);a=e;d.removeEventListener?d.removeEventListener(&quot;error&quot;,a,!1):d.detachEvent&amp;&amp;d.detachEvent(&quot;onerror&quot;,a)};Ea(d,&quot;load&quot;,e);Ea(d,&quot;error&quot;,e)}d.src=b;a.google_image_requests.push(d)};var Ma=function(a,b,c){this.u=a;this.K=b;this.i=c;this.j=null;this.J=this.s;this.A=!1},Na=function(a,b,c){this.message=a;this.fileName=b||&quot;&quot;;this.lineNumber=c||-1},Pa=function(a,b,c){var d;try{d=c()}catch(g){var e=a.i;try{var f=Oa(g),e=a.J.call(a,b,f,void 0,void 0)}catch(h){a.s(&quot;pAR&quot;,h)}if(!e)throw g;}finally{}return d},A=function(a,b){var c=Qa;return function(){for(var d=[],e=0;e&lt;arguments.length;++e)d[e]=arguments[e];return Pa(c,a,function(){return b.apply(void 0,d)})}};Ma.prototype.s=function(a,b,c,d,e){try{var f=e||this.K,g=new Fa;g.l=!0;y(g,1,&quot;context&quot;,a);b instanceof Na||(b=Oa(b));y(g,2,&quot;msg&quot;,b.message.substring(0,512));b.fileName&amp;&amp;y(g,3,&quot;file&quot;,b.fileName);0&lt;b.lineNumber&amp;&amp;y(g,4,&quot;line&quot;,b.lineNumber.toString());b={};if(this.j)try{this.j(b)}catch(H){}if(d)try{d(b)}catch(H){}d=[b];g.c.push(5);g.f[5]=d;var h;e=k;d=[];var m,n=null;do{b=e;var O;try{var u;if(u=!!b&amp;&amp;null!=b.location.href)b:{try{ya(b.foo);u=!0;break b}catch(H){}u=!1}O=u}catch(H){O=!1}O?(m=b.location.href,n=b.document&amp;&amp;b.document.referrer||null):(m=n,n=null);d.push(new Da(m||&quot;&quot;));try{e=b.parent}catch(H){e=null}}while(e&amp;&amp;b!=e);m=0;for(var r=d.length-1;m&lt;=r;++m)d[m].depth=r-m;b=k;if(b.location&amp;&amp;b.location.ancestorOrigins&amp;&amp;b.location.ancestorOrigins.length==d.length-1)for(m=1;m&lt;d.length;++m){var ra=d[m];ra.url||(ra.url=b.location.ancestorOrigins[m-1]||&quot;&quot;,ra.m=!0)}for(var sa=new Da(k.location.href,!1),ta=d.length-1,r=ta;0&lt;=r;--r){var I=d[r];if(I.url&amp;&amp;!I.m){sa=I;break}}var I=null,Wb=d.length&amp;&amp;d[ta].url;0!=sa.depth&amp;&amp;Wb&amp;&amp;(I=d[ta]);h=new Ca(sa,I);h.w&amp;&amp;y(g,6,&quot;top&quot;,h.w.url||&quot;&quot;);y(g,7,&quot;url&quot;,h.v.url||&quot;&quot;);La(this.u,f,g,this.A,c)}catch(H){try{La(this.u,f,{context:&quot;ecmserr&quot;,rctx:a,msg:Ra(H),url:h.v.url},this.A,c)}catch(tc){}}return this.i};var Oa=function(a){return new Na(Ra(a),a.fileName,a.lineNumber)},Ra=function(a){var b=a.toString();a.name&amp;&amp;-1==b.indexOf(a.name)&amp;&amp;(b+=&quot;: &quot;+a.name);a.message&amp;&amp;-1==b.indexOf(a.message)&amp;&amp;(b+=&quot;: &quot;+a.message);if(a.stack){a=a.stack;var c=b;try{-1==a.indexOf(c)&amp;&amp;(a=c+&quot;\n&quot;+a);for(var d;a!=d;)d=a,a=a.replace(/((https?:\/..*\/)[^\/:]*:\d+(?:.|\n)*)\2/,&quot;$1&quot;);b=a.replace(/\n */g,&quot;\n&quot;)}catch(e){b=c}}return b};var Sa=function(){return w(&quot;iPhone&quot;)&amp;&amp;!w(&quot;iPod&quot;)&amp;&amp;!w(&quot;iPad&quot;)};var Ta=w(&quot;Opera&quot;),B=va(),Ua=w(&quot;Edge&quot;),C=w(&quot;Gecko&quot;)&amp;&amp;!(-1!=v.toLowerCase().indexOf(&quot;webkit&quot;)&amp;&amp;!w(&quot;Edge&quot;))&amp;&amp;!(w(&quot;Trident&quot;)||w(&quot;MSIE&quot;))&amp;&amp;!w(&quot;Edge&quot;),Va=-1!=v.toLowerCase().indexOf(&quot;webkit&quot;)&amp;&amp;!w(&quot;Edge&quot;),Wa=function(){var a=k.document;return a?a.documentMode:void 0},Xa;a:{var Ya=&quot;&quot;,Za=function(){var a=v;if(C)return/rv\:([^\);]+)(\)|;)/.exec(a);if(Ua)return/Edge\/([\d\.]+)/.exec(a);if(B)return/\b(?:MSIE|rv)[: ]([^\);]+)(\)|;)/.exec(a);if(Va)return/WebKit\/(\S+)/.exec(a);if(Ta)return/(?:Version)[ \/]?(\S+)/.exec(a)}();Za&amp;&amp;(Ya=Za?Za[1]:&quot;&quot;);if(B){var $a=Wa();if(null!=$a&amp;&amp;$a&gt;parseFloat(Ya)){Xa=String($a);break a}}Xa=Ya}var ab=Xa,bb={},D=function(a){return bb[a]||(bb[a]=0&lt;=ga(ab,a))},cb=k.document,db=cb&amp;&amp;B?Wa()||(&quot;CSS1Compat&quot;==cb.compatMode?parseInt(ab,10):5):void 0;var E=function(a,b){this.width=a;this.height=b};E.prototype.clone=function(){return new E(this.width,this.height)};E.prototype.ceil=function(){this.width=Math.ceil(this.width);this.height=Math.ceil(this.height);return this};E.prototype.floor=function(){this.width=Math.floor(this.width);this.height=Math.floor(this.height);return this};E.prototype.round=function(){this.width=Math.round(this.width);this.height=Math.round(this.height);return this};E.prototype.scale=function(a,b){this.width*=a;this.height*=&quot;number&quot;==typeof b?b:a;return this};!C&amp;&amp;!B||B&amp;&amp;9&lt;=Number(db)||C&amp;&amp;D(&quot;1.9.1&quot;);B&amp;&amp;D(&quot;9&quot;);var F=document,t=window;var G=null,eb=function(){if(!F.body)return!1;if(!G){var a=F.createElement(&quot;iframe&quot;);a.style.display=&quot;none&quot;;a.id=&quot;anonIframe&quot;;G=a;F.body.appendChild(a)}return!0};var Qa;Qa=new Ma(new function(){this.N=&quot;http:&quot;===t.location.protocol?&quot;http:&quot;:&quot;https:&quot;;this.I=&quot;pagead2.googlesyndication.com&quot;;this.M=&quot;/pagead/gen_204?id=&quot;;this.H=.01;this.O=Math.random()},&quot;jserror&quot;,!0);var J=function(a,b){return A(a,b)};B&amp;&amp;D(&quot;9&quot;);!Va||D(&quot;528&quot;);C&amp;&amp;D(&quot;1.9b&quot;)||B&amp;&amp;D(&quot;8&quot;)||Ta&amp;&amp;D(&quot;9.5&quot;)||Va&amp;&amp;D(&quot;528&quot;);C&amp;&amp;!D(&quot;8&quot;)||B&amp;&amp;D(&quot;9&quot;);var fb=0,K={},hb=function(a){var b=K.imageLoadingEnabled;if(null!=b)a(b);else{var c=!1;gb(function(b,e){delete K[e];c||(c=!0,null!=K.imageLoadingEnabled||(K.imageLoadingEnabled=b),a(b))})}},gb=function(a){var b=new Image,c,d=&quot;&quot;+fb++;K[d]=b;b.onload=function(){clearTimeout(c);a(!0,d)};c=setTimeout(function(){a(!1,d)},300);b.src=&quot;data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==&quot;},ib=function(a){if(a){var b=document.createElement(&quot;OBJECT&quot;);b.data=a;b.width=1;b.height=1;b.style.visibility=&quot;hidden&quot;;var c=&quot;&quot;+fb++;K[c]=b;b.onload=b.onerror=function(){delete K[c]};document.body.appendChild(b)}},jb=function(a){if(a){var b=new Image,c=&quot;&quot;+fb++;K[c]=b;b.onload=b.onerror=function(){delete K[c]};b.src=a}},kb=function(a){a&amp;&amp;hb(function(b){b?jb(a):ib(a)})};var lb={F:&quot;ud=1&quot;,D:&quot;ts=0&quot;,S:&quot;sc=1&quot;,B:&quot;gz=1&quot;,C:&quot;op=1&quot;,T:&quot;efp=1&quot;,R:&quot;rda=1&quot;};if(F&amp;&amp;F.URL){var Aa=F.URL,mb=!(Aa&amp;&amp;0&lt;Ba().length);Qa.i=mb}var L=function(a,b,c,d){Ea(a,b,A(d||&quot;osd_or_lidar::&quot;+b,c),void 0)},nb=function(a,b,c){if(!(0&gt;=b)){var d=0,e=function(){a();d++;d&lt;b&amp;&amp;t.setTimeout(A(c,e),100)};e()}};var M=function(a,b){this.b=a||0;this.a=b||&quot;&quot;},N=function(a,b){a.b&amp;&amp;(b[4]=a.b);a.a&amp;&amp;(b[12]=a.a)};M.prototype.match=function(a){return(this.b||this.a)&amp;&amp;(a.b||a.a)?this.a||a.a?this.a==a.a:this.b||a.b?this.b==a.b:!1:!1};M.prototype.toString=function(){var a=&quot;&quot;+this.b;this.a&amp;&amp;(a+=&quot;-&quot;+this.a);return a};var ob=function(){var a=P,b=[];a.b&amp;&amp;b.push(&quot;adk=&quot;+a.b);a.a&amp;&amp;b.push(&quot;exk=&quot;+a.a);return b},pb=function(a){var b=[];na(a,function(a,d){var e=encodeURIComponent(d),f=a;l(f)&amp;&amp;(f=encodeURIComponent(f));b.push(e+&quot;=&quot;+f)});b.push(&quot;24=&quot;+(new Date).getTime());return b.join(&quot;\n&quot;)},qb=0,rb=0,sb=function(a){var b=0,c=t;try{if(c&amp;&amp;c.Goog_AdSense_getAdAdapterInstance)return c}catch(e){}var d=c.location&amp;&amp;c.location.ancestorOrigins;if(!(void 0===d||d&amp;&amp;d.length))return null;for(;c&amp;&amp;5&gt;b;){try{if(c.google_osd_static_frame)return c}catch(e){}try{if(c.aswift_0&amp;&amp;(!a||c.aswift_0.google_osd_static_frame))return c.aswift_0}catch(e){}b++;c=c!=c.parent?c.parent:null}return null},tb=function(a,b,c,d,e){if(10&lt;rb)t.clearInterval(qb);else if(++rb,t.postMessage&amp;&amp;(b.b||b.a)){var f=sb(!0);if(f){var g={};N(b,g);g[0]=&quot;goog_request_monitoring&quot;;g[6]=a;g[16]=c;d&amp;&amp;d.length&amp;&amp;(g[17]=d.join(&quot;,&quot;));e&amp;&amp;(g[19]=e);try{var h=pb(g);f.postMessage(h,&quot;*&quot;)}catch(m){}}}},ub=function(a){var b=sb(!1),c=!b;!b&amp;&amp;t&amp;&amp;(b=t.parent);if(b&amp;&amp;b.postMessage)try{b.postMessage(a,&quot;*&quot;),c&amp;&amp;t.postMessage(a,&quot;*&quot;)}catch(d){}};var Q=!1,vb=function(a){if(a=a.match(/[\d]+/g))a.length=3};(function(){if(navigator.plugins&amp;&amp;navigator.plugins.length){var a=navigator.plugins[&quot;Shockwave Flash&quot;];if(a&amp;&amp;(Q=!0,a.description)){vb(a.description);return}if(navigator.plugins[&quot;Shockwave Flash 2.0&quot;]){Q=!0;return}}if(navigator.mimeTypes&amp;&amp;navigator.mimeTypes.length&amp;&amp;(a=navigator.mimeTypes[&quot;application/x-shockwave-flash&quot;],Q=!(!a||!a.enabledPlugin))){vb(a.enabledPlugin.description);return}try{var b=new ActiveXObject(&quot;ShockwaveFlash.ShockwaveFlash.7&quot;);Q=!0;vb(b.GetVariable(&quot;$version&quot;));return}catch(c){}try{b=new ActiveXObject(&quot;ShockwaveFlash.ShockwaveFlash.6&quot;);Q=!0;return}catch(c){}try{b=new ActiveXObject(&quot;ShockwaveFlash.ShockwaveFlash&quot;),Q=!0,vb(b.GetVariable(&quot;$version&quot;))}catch(c){}})();var wb=w(&quot;Firefox&quot;),xb=Sa()||w(&quot;iPod&quot;),yb=w(&quot;iPad&quot;),zb=w(&quot;Android&quot;)&amp;&amp;!(x()||w(&quot;Firefox&quot;)||w(&quot;Opera&quot;)||w(&quot;Silk&quot;)),Ab=x(),Bb=w(&quot;Safari&quot;)&amp;&amp;!(x()||w(&quot;Coast&quot;)||w(&quot;Opera&quot;)||w(&quot;Edge&quot;)||w(&quot;Silk&quot;)||w(&quot;Android&quot;))&amp;&amp;!(Sa()||w(&quot;iPad&quot;)||w(&quot;iPod&quot;));var R=function(a){return(a=a.exec(v))?a[1]:&quot;&quot;};(function(){if(wb)return R(/Firefox\/([0-9.]+)/);if(B||Ua||Ta)return ab;if(Ab)return R(/Chrome\/([0-9.]+)/);if(Bb&amp;&amp;!(Sa()||w(&quot;iPad&quot;)||w(&quot;iPod&quot;)))return R(/Version\/([0-9.]+)/);if(xb||yb){var a=/Version\/(\S+).*Mobile\/(\S+)/.exec(v);if(a)return a[1]+&quot;.&quot;+a[2]}else if(zb)return(a=R(/Android\s+([0-9.]+)/))?a:R(/Version\/([0-9.]+)/);return&quot;&quot;})();var Db=function(){var a=t.parent&amp;&amp;t.parent!=t,b=a&amp;&amp;0&lt;=&quot;//tpc.googlesyndication.com&quot;.indexOf(t.location.host);if(a&amp;&amp;t.name&amp;&amp;0==t.name.indexOf(&quot;google_ads_iframe&quot;)||b){var c;a=t||t;try{var d;if(a.document&amp;&amp;!a.document.body)d=new E(-1,-1);else{var e=(a||window).document,f=&quot;CSS1Compat&quot;==e.compatMode?e.documentElement:e.body;d=(new E(f.clientWidth,f.clientHeight)).round()}c=d}catch(g){c=new E(-12245933,-12245933)}return Cb(c)}c=t.document.getElementsByTagName(&quot;SCRIPT&quot;);return 0&lt;c.length&amp;&amp;(c=c[c.length-1],c.parentElement&amp;&amp;c.parentElement.id&amp;&amp;0&lt;c.parentElement.id.indexOf(&quot;_ad_container&quot;))?Cb(void 0,c.parentElement):null},Cb=function(a,b){var c=Eb(&quot;IMG&quot;,a,b);return c||(c=Eb(&quot;IFRAME&quot;,a,b))?c:(c=Eb(&quot;OBJECT&quot;,a,b))?c:null},Eb=function(a,b,c){var d=document;c=c||d;d=a&amp;&amp;&quot;*&quot;!=a?a.toUpperCase():&quot;&quot;;c=c.querySelectorAll&amp;&amp;c.querySelector&amp;&amp;d?c.querySelectorAll(d+&quot;&quot;):c.getElementsByTagName(d||&quot;*&quot;);for(d=0;d&lt;c.length;d++){var e=c[d];if(&quot;OBJECT&quot;==a)a:{var f=e.getAttribute(&quot;height&quot;);if(null!=f&amp;&amp;0&lt;f&amp;&amp;0==e.clientHeight)for(var f=e.children,g=0;g&lt;f.length;g++){var h=f[g];if(&quot;OBJECT&quot;==h.nodeName||&quot;EMBED&quot;==h.nodeName){e=h;break a}}}f=e.clientHeight;g=e.clientWidth;if(h=b)h=new E(g,f),h=Math.abs(b.width-h.width)&lt;.1*b.width&amp;&amp;Math.abs(b.height-h.height)&lt;.1*b.height;if(h||!b&amp;&amp;10&lt;f&amp;&amp;10&lt;g)return e}return null};var S=0,Fb=&quot;&quot;,Gb=[],T=!1,U=!1,V=!1,Hb=!0,Ib=!1,Jb=!1,Kb=!1,Lb=!1,Mb=!1,Nb=!1,Ob=0,Pb=0,W=0,Qb=[],P=null,Rb=&quot;&quot;,Sb=[],Tb=null,Ub=[],Vb=!1,Xb=&quot;&quot;,Yb=&quot;&quot;,Zb=(new Date).getTime(),$b=!1,ac=&quot;&quot;,bc=!1,cc=[&quot;1&quot;,&quot;0&quot;,&quot;3&quot;],X=0,Y=0,dc=0,ec=&quot;&quot;,gc=function(a,b,c){T&amp;&amp;(Hb||3!=(c||3)||Kb)&amp;&amp;fc(a,b,!0);if(V||U&amp;&amp;Jb)fc(a,b),U=V=!1},hc=function(){var a=Tb;return a?2!=a():!0},fc=function(a,b,c){if((b=b||Rb)&amp;&amp;!Vb&amp;&amp;(2==Y||c)&amp;&amp;hc()){for(var d=0;d&lt;Gb.length;++d){var e=ic(Gb[d],b,c),f=a;Ib?kb(e):z(f,e,void 0)}Mb=!0;c?T=!1:Vb=!0}},jc=function(a,b){var c=[];a&amp;&amp;c.push(&quot;avi=&quot;+a);b&amp;&amp;c.push(&quot;cid=&quot;+b);return c.length?&quot;//pagead2.googlesyndication.com/activeview?&quot;+c.join(&quot;&amp;&quot;):&quot;//pagead2.googlesyndication.com/activeview&quot;},ic=function(a,b,c){c=c?&quot;osdim&quot;:V?&quot;osd2&quot;:&quot;osdtos&quot;;a=[a,-1&lt;a.indexOf(&quot;?&quot;)?&quot;&amp;id=&quot;:&quot;?id=&quot;,c];&quot;osd2&quot;==c&amp;&amp;U&amp;&amp;Jb&amp;&amp;a.push(&quot;&amp;ts=1&quot;);a.push(&quot;&amp;ti=1&quot;);a.push(&quot;&amp;&quot;,b);a.push(&quot;&amp;uc=&quot;+dc);$b?a.push(&quot;&amp;tgt=&quot;+ac):a.push(&quot;&amp;tgt=nf&quot;);a.push(&quot;&amp;cl=&quot;+(bc?1:0));Nb&amp;&amp;(a.push(&quot;&amp;lop=1&quot;),b=p()-Ob,a.push(&quot;&amp;tslp=&quot;+b));b=a.join(&quot;&quot;);for(a=0;a&lt;Sb.length;a++){try{var d=Sb[a]()}catch(e){}c=&quot;max_length&quot;;2&lt;=d.length&amp;&amp;(3==d.length&amp;&amp;(c=d[2]),b=ca(b,encodeURIComponent(d[0]),encodeURIComponent(d[1]),c))}2E3&lt;b.length&amp;&amp;(b=b.substring(0,2E3));return b},Z=function(a){if(Xb){try{var b=ca(Xb,&quot;vi&quot;,a);eb()&amp;&amp;z(G.contentWindow,b,void 0)}catch(c){}0&lt;=ka(cc,a)&amp;&amp;(Xb=&quot;&quot;)}},kc=function(){Z(&quot;-1&quot;)},mc=function(a){if(a&amp;&amp;a.data&amp;&amp;l(a.data)){var b;var c=a.data;if(l(c)){b={};for(var c=c.split(&quot;\n&quot;),d=0;d&lt;c.length;d++){var e=c[d].indexOf(&quot;=&quot;);if(!(0&gt;=e)){var f=Number(c[d].substr(0,e)),e=c[d].substr(e+1);switch(f){case 5:case 8:case 11:case 15:case 16:case 18:e=&quot;true&quot;==e;break;case 4:case 7:case 6:case 14:case 20:case 21:case 22:case 23:case 24:e=Number(e);break;case 3:case 19:if(&quot;function&quot;==aa(decodeURIComponent))try{e=decodeURIComponent(e)}catch(h){throw Error(&quot;Error: URI malformed: &quot;+e);}break;case 17:e=ma(decodeURIComponent(e).split(&quot;,&quot;),Number)}b[f]=e}}b=b[0]?b:null}else b=null;if(b&amp;&amp;(c=new M(b[4],b[12]),P&amp;&amp;P.match(c))){for(c=0;c&lt;Ub.length;c++)Ub[c](b);void 0!=b[18]&amp;&amp;(Kb=b[18],Kb||2!=W||(W=3,lc()));c=b[0];if(&quot;goog_acknowledge_monitoring&quot;==c)t.clearInterval(qb),X=2;else if(&quot;goog_get_mode&quot;==c){X=1;d={};P&amp;&amp;N(P,d);d[0]=&quot;goog_provide_mode&quot;;d[6]=Y;d[19]=ec;d[16]=U;try{var g=pb(d);a.source.postMessage(g,a.origin)}catch(h){}t.clearInterval(qb);X=2}else&quot;goog_update_data&quot;==c?(Rb=b[3],++dc):&quot;goog_image_request&quot;==c&amp;&amp;(gc(t,b[3]),b[5]||b[11]||Z(&quot;0&quot;));if(&quot;goog_update_data&quot;==c||&quot;goog_image_request&quot;==c)(1==Y||2==Y||T)&amp;&amp;b[5]&amp;&amp;(a=1==b[15]&amp;&amp;&quot;goog_update_data&quot;==c,Jb=!0,Z(&quot;1&quot;),Yb&amp;&amp;hc()&amp;&amp;(g=Yb,eb()&amp;&amp;z(G.contentWindow,g,void 0),Yb=&quot;&quot;),T&amp;&amp;!a&amp;&amp;(fc(t,void 0,!0),Lb=!0,Pb=p()),3==W&amp;&amp;(W=4,lc()),T||1!=Y||(Vb=!0)),(1==Y||2==Y||T)&amp;&amp;b[11]&amp;&amp;(U=!1,Z(&quot;3&quot;),T&amp;&amp;(fc(t,void 0,!0),1==W&amp;&amp;Kb&amp;&amp;(W=2)))}}},lc=function(){var a=t,b=W;0!=b&amp;&amp;1!=b&amp;&amp;nc(a,&quot;osdim&quot;,&quot;zas=&quot;+b)},nc=function(a,b,c){var d=[];Fb&amp;&amp;d.push(&quot;avi=&quot;+Fb);d.push(&quot;id=&quot;+b);d.push(&quot;ovr_value=&quot;+S);Nb&amp;&amp;d.push(&quot;lop=1&quot;);P&amp;&amp;(d=d.concat(ob()));d.push(&quot;tt=&quot;+((new Date).getTime()-Zb));d.push(c);a.document&amp;&amp;a.document.referrer&amp;&amp;d.push(&quot;ref=&quot;+encodeURIComponent(a.document.referrer));try{z(a,&quot;//pagead2.googlesyndication.com/pagead/gen_204?&quot;+d.join(&quot;&amp;&quot;),void 0)}catch(e){}},oc=function(){gc(t);Z(&quot;0&quot;);2&gt;X&amp;&amp;!U&amp;&amp;2==Y&amp;&amp;nc(t,&quot;osd2&quot;,&quot;hs=&quot;+X)},pc=function(){var a={};N(P,a);a[0]=&quot;goog_dom_content_loaded&quot;;var b=pb(a);try{nb(function(){ub(b)},10,&quot;osd_listener::ldcl_int&quot;)}catch(c){}},qc=function(){var a={};N(P,a);a[0]=&quot;goog_creative_loaded&quot;;var b=pb(a);nb(function(){ub(b)},10,&quot;osd_listener::lcel_int&quot;);bc=!0},rc=function(a){if(l(a)){a=a.split(&quot;&amp;&quot;);for(var b=a.length-1;0&lt;=b;b--){var c=a[b],d=lb;c==d.F?(Hb=!1,a.splice(b,1)):c==d.B?(W=1,a.splice(b,1)):c==d.D?(U=!1,a.splice(b,1)):c==d.C&amp;&amp;(Ib=!0,a.splice(b,1))}ec=a.join(&quot;&amp;&quot;)}},sc=function(){if(!$b){var a=Db();a&amp;&amp;($b=!0,ac=a.tagName,a.complete||a.naturalWidth?qc():L(a,&quot;load&quot;,qc,&quot;osd_listener::creative_load&quot;))}};q(&quot;osdlfm&quot;,J(&quot;osd_listener::init&quot;,function(a,b,c,d,e,f,g,h,m){S=a;Xb=b;Yb=d;T=f;g&amp;&amp;rc(g);U=f;1==h?Qb.push(947190538):2==h?Qb.push(947190541):3==h&amp;&amp;Qb.push(947190542);P=new M(e,da());L(t,&quot;load&quot;,kc,&quot;osd_listener::load&quot;);L(t,&quot;message&quot;,mc,&quot;osd_listener::message&quot;);Fb=c||&quot;&quot;;Gb=[jc(c,m)];L(t,&quot;unload&quot;,oc,&quot;osd_listener::unload&quot;);var n=t.document;!n.readyState||&quot;complete&quot;!=n.readyState&amp;&amp;&quot;loaded&quot;!=n.readyState?!va()||0&lt;=ga(xa(),11)?L(n,&quot;DOMContentLoaded&quot;,pc,&quot;osd_listener::dcl&quot;):L(n,&quot;readystatechange&quot;,function(){&quot;complete&quot;!=n.readyState&amp;&amp;&quot;loaded&quot;!=n.readyState||pc()},&quot;osd_listener::rsc&quot;):pc();-1==S?Y=f?3:1:-2==S?Y=3:0&lt;S&amp;&amp;(Y=2,V=!0);U&amp;&amp;!V&amp;&amp;-1==S&amp;&amp;(Y=2);P&amp;&amp;(P.b||P.a)&amp;&amp;(X=1,qb=t.setInterval(A(&quot;osd_proto::reqm_int&quot;,ba(tb,Y,P,U,Qb,ec)),500));nb(sc,5,&quot;osd_listener:sfc&quot;)}));q(&quot;osdlac&quot;,J(&quot;osd_listener::lac_ex&quot;,function(a){Sb.push(a)}));q(&quot;osdlamrc&quot;,J(&quot;osd_listener::lamrc_ex&quot;,function(a){Ub.push(a)}));q(&quot;osdsir&quot;,A(&quot;osd_listener::sir_ex&quot;,gc));q(&quot;osdacrc&quot;,J(&quot;osd_listener::acrc_ex&quot;,function(a){Tb=a}));q(&quot;osdpcls&quot;,J(&quot;osd_listener::acrc_ex&quot;,function(a){if(!a||t==t.top||Vb||Mb&amp;&amp;!Lb)return!1;Nb=!0;a=/^(http[s]?:)?\/\//.test(a)?a:jc(a);if(Lb){var b=ic(a,Rb,!0),c=p()-Pb,b=ja(b,&quot;tsvp&quot;,c),c=t;Ib?kb(b):z(c,b,void 0)}Gb.push(a);Ob=p();return!0}));}).call(this);osdlfm(-1,&#39;&#39;,&#39;BZJLqrCB2V8zGOc7K9gXYp5nwBQD33_DXjAEAABABOAHIAQngAgDgBAGgBiE&#39;,&#39;&#39;,1323899604,true,&#39;ud\x3d1\x26la\x3d0\x26&#39;,3,&#39;CAASFeRo5O9yS7S6r-087qUmmp74IpNBig&#39;,&#39;&#39;);&lt;/script&gt;&lt;img src=&quot;//www.google.com/ads/measurement/l?ebcid=ALh7CaQrpONxJuuoETRfeQTvVMRPmpRYK3JPlpGbCSwcMthUO_tF-qqtW2BNN_JrA5Sv585419TRguHbx-FSxGWBico1Vq2x2g&quot; style=&quot;display:none;&quot;&gt;&lt;/img&gt;&lt;script&gt;if (window.top &amp;&amp; window.top.postMessage) {window.top.postMessage(&#39;{&quot;googMsgType&quot;: &quot;adpnt&quot;}&#39;, &#39;*&#39;);}&lt;/script&gt;&lt;/body&gt;&lt;/html&gt;{&quot;uid&quot;:1,&quot;hostPeerName&quot;:&quot;http://d.hatena.ne.jp&quot;,&quot;initialGeometry&quot;:&quot;{\&quot;windowCoords_t\&quot;:144,\&quot;windowCoords_r\&quot;:539,\&quot;windowCoords_b\&quot;:739,\&quot;windowCoords_l\&quot;:648,\&quot;frameCoords_t\&quot;:1816.640625,\&quot;frameCoords_r\&quot;:451.40625,\&quot;frameCoords_b\&quot;:2096.640625,\&quot;frameCoords_l\&quot;:115.40625,\&quot;styleZIndex\&quot;:\&quot;auto\&quot;,\&quot;allowedExpansion_t\&quot;:0,\&quot;allowedExpansion_r\&quot;:0,\&quot;allowedExpansion_b\&quot;:0,\&quot;allowedExpansion_l\&quot;:0,\&quot;xInView\&quot;:0,\&quot;yInView\&quot;:0}&quot;,&quot;permissions&quot;:&quot;{\&quot;expandByOverlay\&quot;:false,\&quot;expandByPush\&quot;:false,\&quot;readCookie\&quot;:false,\&quot;writeCookie\&quot;:false}&quot;,&quot;metadata&quot;:&quot;{\&quot;shared\&quot;:{\&quot;sf_ver\&quot;:\&quot;1-0-4\&quot;,\&quot;ck_on\&quot;:1,\&quot;flash_ver\&quot;:\&quot;22.0.0\&quot;}}&quot;,&quot;reportCreativeGeometry&quot;:false,&quot;isDifferentSourceWindow&quot;:false}" scrolling="no" marginwidth="0" marginheight="0" width="336" height="280" data-is-safeframe="true" style="border: 0px; vertical-align: bottom;"></iframe></div><iframe id="google_ads_iframe_/4374287/diary_user_track_0__hidden__" title="" name="google_ads_iframe_/4374287/diary_user_track_0__hidden__" width="0" height="0" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" src="javascript:&quot;&lt;html&gt;&lt;body style=&#39;background:transparent&#39;&gt;&lt;/body&gt;&lt;/html&gt;&quot;" style="border: 0px; vertical-align: bottom; visibility: hidden; display: none;" src="./localvimrc_ ディレクトリごとに別の .vimrc を適用する - 玉虫色に染まれ！_files/saved_resource(6).html"></iframe></div>
+  <script>
+    var hatenadfp = hatenadfp || {};
+    hatenadfp.adUnits = hatenadfp.adUnits || [];
+    hatenadfp.adUnits.push(
+      { unitName: 'diary_user_track', size: [[300,250],[336,280]], divId: 'diary-pc-trackback-rectangle' }
+    );
+    hatenadfp.isNGContent = false;
+  </script>
+  <script type="text/javascript" charset="UTF-8" src="./localvimrc_ ディレクトリごとに別の .vimrc を適用する - 玉虫色に染まれ！_files/hatena_dfp2.js"></script>
+  
+
+
+
+
+
+
+
+
+</div>
+
+
+
+</div>
+<div class="calendar" id="pager-bottom">
+  <a rel="prev" href="http://d.hatena.ne.jp/over80/20140417/1397745558" class="prev">&lt;[linux] 打ち込めないような名前...</a><img src="./localvimrc_ ディレクトリごとに別の .vimrc を適用する - 玉虫色に染まれ！_files/icon-quickpager.gif" style="vertical-align: middle; margin-left: 3px; cursor: pointer;">&nbsp;<span class="delimiter">|</span>&nbsp;<a rel="next" href="http://d.hatena.ne.jp/over80/20141013/1413174967" class="next">[電子工作] AVRで秋月のI2C接続...&gt;</a>
+</div>
+<div class="day">
+<hr>
+<script language="javascript" type="text/javascript" src="./localvimrc_ ディレクトリごとに別の .vimrc を適用する - 玉虫色に染まれ！_files/widget.js" charset="utf-8"></script>
+<script language="javascript" type="text/javascript">
+Hatena.BookmarkWidget.url   = "http://d.hatena.ne.jp/over80/";
+Hatena.BookmarkWidget.title = "このBlogの人気エントリー";
+Hatena.BookmarkWidget.sort  = "count";
+Hatena.BookmarkWidget.width = 0;
+Hatena.BookmarkWidget.num   = 10;
+Hatena.BookmarkWidget.theme = "hatenadiary";
+Hatena.BookmarkWidget.load();
+</script><div id="hatena-bookmark-widget0" class="hatena-bookmark hatena-module"><div class="hatena-moduletitle"><a href="http://b.hatena.ne.jp/entrylist?url=http://d.hatena.ne.jp/over80/&amp;sort=count"><img src="./localvimrc_ ディレクトリごとに別の .vimrc を適用する - 玉虫色に染まれ！_files/favicon.gif">このBlogの人気エントリー</a></div><div class="hatena-modulebody"><ul><li><a class="hatena-bookmark-entrytitle" href="http://d.hatena.ne.jp/over80/20140407/ddrescue">死にかけのHDDからのデータ吸い出しには GNU ddrescue が良いら...</a><span class="hatena-bookmark-count"><strong><a href="http://b.hatena.ne.jp/entry/http://d.hatena.ne.jp/over80/20140407/ddrescue">180users</a></strong></span></li><li><a class="hatena-bookmark-entrytitle" href="http://d.hatena.ne.jp/over80/20080907/1220794834"> viで日本語の文字コードを自動判別 - 玉虫色に染まれ！</a><span class="hatena-bookmark-count"><strong><a href="http://b.hatena.ne.jp/entry/http://d.hatena.ne.jp/over80/20080907/1220794834">148users</a></strong></span></li><li><a class="hatena-bookmark-entrytitle" href="http://d.hatena.ne.jp/over80/20090305/1236264851"> Pythonを快適に編集できるようvimを設定する - 玉虫色に染ま...</a><span class="hatena-bookmark-count"><strong><a href="http://b.hatena.ne.jp/entry/http://d.hatena.ne.jp/over80/20090305/1236264851">81users</a></strong></span></li><li><a class="hatena-bookmark-entrytitle" href="http://d.hatena.ne.jp/over80/20080818/1219074708"> Linuxで使える動画編集ソフト(その1) - 玉虫色に染まれ！</a><span class="hatena-bookmark-count"><strong><a href="http://b.hatena.ne.jp/entry/http://d.hatena.ne.jp/over80/20080818/1219074708">44users</a></strong></span></li><li><a class="hatena-bookmark-entrytitle" href="http://d.hatena.ne.jp/over80/20080706/1215343642">はちゅねミク小型化戦争勃発 - 玉虫色に染まれ！</a><span class="hatena-bookmark-count"><strong><a href="http://b.hatena.ne.jp/entry/http://d.hatena.ne.jp/over80/20080706/1215343642">33users</a></strong></span></li><li><a class="hatena-bookmark-entrytitle" href="http://d.hatena.ne.jp/over80/20080723/1216827490">Ubuntu の vim を快適にする - 玉虫色に染まれ！</a><span class="hatena-bookmark-count"><strong><a href="http://b.hatena.ne.jp/entry/http://d.hatena.ne.jp/over80/20080723/1216827490">29users</a></strong></span></li><li><a class="hatena-bookmark-entrytitle" href="http://d.hatena.ne.jp/over80/20100504/1272993532"> Ubuntu 10.04 で flash の文字化けを解消する - 玉虫色に染まれ...</a><span class="hatena-bookmark-count"><strong><a href="http://b.hatena.ne.jp/entry/http://d.hatena.ne.jp/over80/20100504/1272993532">28users</a></strong></span></li><li><a class="hatena-bookmark-entrytitle" href="http://d.hatena.ne.jp/over80/20080802/1217693705">recordMyDesktop: Linuxのデスクトップ画面を動画キャプチャする ...</a><span class="hatena-bookmark-count"><strong><a href="http://b.hatena.ne.jp/entry/http://d.hatena.ne.jp/over80/20080802/1217693705">26users</a></strong></span></li><li><a class="hatena-bookmark-entrytitle" href="http://d.hatena.ne.jp/over80/20120301/sikuli">GUI自動操作ツール Sikuli を Ubuntu 11.10(Oneiric) にインストール ...</a><span class="hatena-bookmark-count"><strong><a href="http://b.hatena.ne.jp/entry/http://d.hatena.ne.jp/over80/20120301/sikuli">24users</a></strong></span></li><li><a class="hatena-bookmark-entrytitle" href="http://d.hatena.ne.jp/over80/20080701/1214926377"> muninのプラグインの追加/削除 - 玉虫色に染まれ！</a><span class="hatena-bookmark-count"><strong><a href="http://b.hatena.ne.jp/entry/http://d.hatena.ne.jp/over80/20080701/1214926377">21users</a></strong></span></li></ul></div><div class="hatena-modulefooter"><a href="http://b.hatena.ne.jp/"><span>Hatena::Bookmark</span></a></div></div>
+</div>
+</div>
+<div class="sidebar">
+	<div class="hatena-module hatena-module-profile">
+  <div class="hatena-moduletitle">プロフィール</div>
+  <div class="hatena-modulebody">
+    <div class="hatena-profile">
+      <p class="hatena-profile-image"><a href="http://d.hatena.ne.jp/over80/about"><img src="./localvimrc_ ディレクトリごとに別の .vimrc を適用する - 玉虫色に染まれ！_files/profile.gif" alt="over80"></a></p>
+      <p class="hatena-profile-id"><a href="http://d.hatena.ne.jp/over80/about">over80</a></p>
+      <p class="hatena-profile-body">雑多な事を変な視点からぬるぬると書きます。白黒付けなくたっていいじゃない！</p>
+    </div>
+  </div>
+</div>
+
+
+<div class="hatena-module">
+ <div class="hatena-moduletitle"><a href="http://twitter.com/over80s">Twitter</a></div>
+ <div class="hatena-modulebody">
+<div style="width:176px;text-align:center"><embed src="http://twitter.com/flash/twitter_badge.swf" flashvars="color1=10066329&amp;type=user&amp;id=83321270" quality="high" width="176" height="176" name="twitter_badge" align="middle" allowscriptaccess="always" wmode="transparent" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer"><br><a href="http://twitter.com/over80s" style="font-size: 10px; color: #999999; text-decoration: none">follow over80s at http://twitter.com</a></div>
+ </div>
+</div>
+	        <div class="hatena-module hatena-module-rss">
+                <div class="hatena-moduletitle"><a href="http://www.nicovideo.jp/mylist/17270699">マイリスト over80の作ったっぽいもの‐ニコニコ動画</a></div>
+                <div class="hatena-modulebody">
+                        <ul class="hatena-rss">
+                                <li><a href="http://www.nicovideo.jp/watch/sm13739652" title="よっしゃ、ぎりぎりで間に合っ……って無い……だとっ……すみません。遅刻しました m(_ _)mダウンロード → http://goo.gl/TBd0k 動画内で触れた前回投稿動画 sm7746766その他の投稿動画 mylist/172706995:25｜2011年03月01日 00：04：05 投稿">スマートフォンの機能を使いまくって目覚し時計を作ってみた</a></li>
+                                <li><a href="http://www.nicovideo.jp/watch/sm7746766" title="忙しい時って無性に現実逃避したくなるよね。だから、今日から海外出張なのにこんな動画つくってるのは不可抗力だよね。「俺、日本に帰ったら、この動画の続きを作るんだ……」参照動画: たこルカぽっぴっぽー sm6040129(2009/8/6追記) 帰国しました。皆様からの罵倒暖かいコメ、痛み入ります。反省動画は作成するつもりですが、完成時期は未定です。原稿用紙半枚ぐらいでいいですか？(2011/2/29追記) 反省したので、真面目に動画を作りました → sm13739652マイリス mylist/172706993:11｜2009年07月26日 10：26：40 投稿">８本足のアイツにアレを踊ってもらった（発想祭出品作）</a></li>
+                                <li><a href="http://www.nicovideo.jp/watch/sm6825280" title="しめて６００円。マイリス mylist/172706994:33｜2009年04月22日 22：17：02 投稿">VAIO typePが入る「ポケット」をつくってみた</a></li>
+                                <li><a href="http://www.nicovideo.jp/watch/sm4260033" title="「はちゅねに見えない」は禁句。IE6は不可。魔法の言葉はこちら→ http://d.hatena.ne.jp/over80/20080811/1218473082 (ニコニコ動画の仕様が変わって、ここにスクリプトを貼れなくなったようなので、魔法の言葉はブログを参照してください）マイリス mylist/172706991:53｜2008年08月12日 00：13：23 投稿">【JavaScriptで】ニコ動の上でネギを振らせてみた【ふるみっく】</a></li>
+                        </ul>
+                </div>
+        </div>
+
+	<div class="hatena-module hatena-module-searchform">
+<div class="hatena-moduletitle">日記の検索</div>
+<div class="hatena-modulebody">
+<form method="GET" action="http://d.hatena.ne.jp/over80/searchdiary" class="hatena-searchform"><input type="text" name="word" class="hatena-searchform searchform-word" value=""><input type="submit" name=".submit" value="検索" class="hatena-searchform searchform-button"><br><label class="searchform-label-detail"><input type="radio" name="type" value="detail" checked="checked" class="searchform-radio">詳細</label> <label class="searchform-label-list"><input type="radio" name="type" value="list" class="searchform-radio">一覧</label></form>
+
+</div>
+</div>
+
+	<div class="hatena-module hatena-module-section">
+<div class="hatena-moduletitle"><a href="http://d.hatena.ne.jp/over80/archive">最新タイトル</a></div>
+<div class="hatena-modulebody">
+<ul class="hatena-section">
+<li><a href="http://d.hatena.ne.jp/over80/20160221/scipy"> SciPyとその仲間たち（NumPy, IPython など）の違いと関係</a></li>
+<li><a href="http://d.hatena.ne.jp/over80/20150816/pure_python_inotify"> 純 Python で C のライブラリを呼び出す（Linux inotifyを例に）</a></li>
+<li><a href="http://d.hatena.ne.jp/over80/20150809/mod_rewrite"> RewriteRule を .htaccess に記述する際の罠</a></li>
+<li><a href="http://d.hatena.ne.jp/over80/20150531/1433041341"> CentOS 5 に Python 2.6 &amp; PIP を導入（EPELリポジトリの利用)</a></li>
+<li><a href="http://d.hatena.ne.jp/over80/20150505/ttrss_update"> Tiny Tiny RSS のアップデート</a></li>
+<li><a href="http://d.hatena.ne.jp/over80/20141026/1414338192"> Android Studio を Ubuntu 14.04 (64bit) にインストール</a></li>
+<li><a href="http://d.hatena.ne.jp/over80/20141013/1413174967"> AVRで秋月のI2C接続小型キャラクターLCDを動かす</a></li>
+<li><a href="http://d.hatena.ne.jp/over80/20140830/localvimrc"> localvimrc: ディレクトリごとに別の .vimrc を適用する</a></li>
+<li><a href="http://d.hatena.ne.jp/over80/20140417/1397745558"> 打ち込めないような名前のファイルでもシェルで操作する方法</a></li>
+<li><a href="http://d.hatena.ne.jp/over80/20140412/1397313257"> AtCoder Regular Contest #020 (+ Beginner Contest #006) 参加記録</a></li>
+</ul>
+</div>
+</div>
+
+        <div class="hatena-module hatena-module-sectioncategory">
+<div class="hatena-moduletitle">カテゴリー</div>
+<div class="hatena-modulebody">
+<ul class="hatena-sectioncategory">
+<li><a href="http://d.hatena.ne.jp/over80/searchdiary?word=%2A%5B%A4%CF%A4%C6%A4%CA%A5%C0%A5%A4%A5%A2%A5%EA%A1%BC%5D">はてなダイアリー</a></li>
+<li><a href="http://d.hatena.ne.jp/over80/searchdiary?word=%2A%5BFirefox%5D">Firefox</a></li>
+<li><a href="http://d.hatena.ne.jp/over80/searchdiary?word=%2A%5BCSS%5D">CSS</a></li>
+<li><a href="http://d.hatena.ne.jp/over80/searchdiary?word=%2A%5BLinux%5D">Linux</a></li>
+<li><a href="http://d.hatena.ne.jp/over80/searchdiary?word=%2A%5Bpidgin%5D">pidgin</a></li>
+<li><a href="http://d.hatena.ne.jp/over80/searchdiary?word=%2A%5BInkspace%5D">Inkspace</a></li>
+<li><a href="http://d.hatena.ne.jp/over80/searchdiary?word=%2A%5B%C0%B8%B3%E8%B2%FE%C1%B1%5D">生活改善</a></li>
+<li><a href="http://d.hatena.ne.jp/over80/searchdiary?word=%2A%5BXorg%5D">Xorg</a></li>
+<li><a href="http://d.hatena.ne.jp/over80/searchdiary?word=%2A%5BFedora%5D">Fedora</a></li>
+<li><a href="http://d.hatena.ne.jp/over80/searchdiary?word=%2A%5BInkscape%5D">Inkscape</a></li>
+<li><a href="http://d.hatena.ne.jp/over80/searchdiary?word=%2A%5BUbuntu%5D">Ubuntu</a></li>
+<li><a href="http://d.hatena.ne.jp/over80/searchdiary?word=%2A%5Bprocmail%5D">procmail</a></li>
+<li><a href="http://d.hatena.ne.jp/over80/searchdiary?word=%2A%5BDovecot%5D">Dovecot</a></li>
+<li><a href="http://d.hatena.ne.jp/over80/searchdiary?word=%2A%5Bfetchmail%5D">fetchmail</a></li>
+<li><a href="http://d.hatena.ne.jp/over80/searchdiary?word=%2A%5Bcrontab%5D">crontab</a></li>
+<li><a href="http://d.hatena.ne.jp/over80/searchdiary?word=%2A%5Bcdrecord%5D">cdrecord</a></li>
+<li><a href="http://d.hatena.ne.jp/over80/searchdiary?word=%2A%5BGNOME%5D">GNOME</a></li>
+<li><a href="http://d.hatena.ne.jp/over80/searchdiary?word=%2A%5B%A4%CF%A4%C6%A4%CAfotolife%5D">はてなfotolife</a></li>
+<li><a href="http://d.hatena.ne.jp/over80/searchdiary?word=%2A%5BSubversion%5D">Subversion</a></li>
+<li><a href="http://d.hatena.ne.jp/over80/searchdiary?word=%2A%5BWeblog%5D">Weblog</a></li>
+<li><a href="http://d.hatena.ne.jp/over80/searchdiary?word=%2A%5B%BB%A8%B5%AD%5D">雑記</a></li>
+<li><a href="http://d.hatena.ne.jp/over80/searchdiary?word=%2A%5BCentOS%5D">CentOS</a></li>
+<li><a href="http://d.hatena.ne.jp/over80/searchdiary?word=%2A%5BRPMforge%5D">RPMforge</a></li>
+<li><a href="http://d.hatena.ne.jp/over80/searchdiary?word=%2A%5Bmunin%5D">munin</a></li>
+<li><a href="http://d.hatena.ne.jp/over80/searchdiary?word=%2A%5B%A5%CB%A5%B3%A5%CB%A5%B3%C6%B0%B2%E8%5D">ニコニコ動画</a></li>
+<li><a href="http://d.hatena.ne.jp/over80/searchdiary?word=%2A%5B%C5%C5%BB%D2%B9%A9%BA%EE%5D">電子工作</a></li>
+<li><a href="http://d.hatena.ne.jp/over80/searchdiary?word=%2A%5Bvim%5D">vim</a></li>
+<li><a href="http://d.hatena.ne.jp/over80/searchdiary?word=%2A%5B%C6%B0%B2%E8%CA%D4%BD%B8%5D">動画編集</a></li>
+<li><a href="http://d.hatena.ne.jp/over80/searchdiary?word=%2A%5Biconv%5D">iconv</a></li>
+<li><a href="http://d.hatena.ne.jp/over80/searchdiary?word=%2A%5BBluetooth%5D">Bluetooth</a></li>
+<li><a href="http://d.hatena.ne.jp/over80/searchdiary?word=%2A%5BPython%5D">Python</a></li>
+<li><a href="http://d.hatena.ne.jp/over80/searchdiary?word=%2A%5BShell%5D">Shell</a></li>
+<li><a href="http://d.hatena.ne.jp/over80/searchdiary?word=%2A%5Bandroid%5D">android</a></li>
+<li><a href="http://d.hatena.ne.jp/over80/searchdiary?word=%2A%5Bmtm07%5D">mtm07</a></li>
+<li><a href="http://d.hatena.ne.jp/over80/searchdiary?word=%2A%5BJavaScript%5D">JavaScript</a></li>
+<li><a href="http://d.hatena.ne.jp/over80/searchdiary?word=%2A%5BCompetitive%20Programming%5D">Competitive Programming</a></li>
+</ul>
+</div>
+</div>
+
+	<div class="hatena-module hatena-module-comment">
+<div class="hatena-moduletitle">最近のコメント</div>
+<div class="hatena-modulebody">
+<ul class="hatena-recentcomment">
+<li><a href="http://d.hatena.ne.jp/over80/20091025/1256484531#c">2009-10-25</a>&nbsp;あんどろ</li>
+<li><a href="http://d.hatena.ne.jp/over80/20140407/ddrescue#c">2014-04-07</a>&nbsp;over80</li>
+<li><a href="http://d.hatena.ne.jp/over80/20140407/ddrescue#c">2014-04-07</a>&nbsp;通りすがり</li>
+<li><a href="http://d.hatena.ne.jp/over80/20140316/1394985072#c">2014-03-16</a>&nbsp;over80</li>
+<li><a href="http://d.hatena.ne.jp/over80/20140316/1394985072#c">2014-03-16</a>&nbsp;名無し</li>
+</ul>
+</div>
+</div>
+
+	<div class="hatena-module hatena-module-trackback">
+<div class="hatena-moduletitle">最近のトラックバック</div>
+<div class="hatena-modulebody">
+<ul class="hatena-recentcomment">
+<li><a href="http://d.hatena.ne.jp/over80/20150816#tb">2015-08-16</a>&nbsp;<a href="http://twitter.com/hakoniwa8nohara/status/692623109199769600">Twitter / @hakoniwa8nohara</a></li>
+<li><a href="http://d.hatena.ne.jp/over80/20150816#tb">2015-08-16</a>&nbsp;<a href="http://twitter.com/montfield/status/679865655345213440">Twitter / @montfield</a></li>
+<li><a href="http://d.hatena.ne.jp/over80/20150816#tb">2015-08-16</a>&nbsp;<a href="http://twitter.com/montfield/status/679865629608837121">Twitter / @montfield</a></li>
+<li><a href="http://d.hatena.ne.jp/over80/20150816#tb">2015-08-16</a>&nbsp;<a href="http://twitter.com/watanabe_tanaka/status/665021646751723520">Twitter / @watanabe_tanaka</a></li>
+<li><a href="http://d.hatena.ne.jp/over80/20150809#tb">2015-08-09</a>&nbsp;<a href="http://twitter.com/hidemita/status/632406987955830784">Twitter / @hidemita</a></li>
+</ul>
+</div>
+</div>
+
+
+<div class="hatena-module">
+ <div class="hatena-moduletitle">Amazon Associates</div>
+ <div class="hatena-modulebody">
+
+<script type="text/javascript"><!--
+amazon_ad_tag="ltap-22"; 
+amazon_ad_width="160"; 
+amazon_ad_height="600"; 
+amazon_color_background="DBDBDB"; 
+amazon_color_border="ABABAB"; 
+amazon_color_logo="FFFFFF"; 
+amazon_color_link="C90606"; 
+amazon_ad_logo="hide"; 
+amazon_ad_title="over80: 最近買ったもの＆買いたいもの"; //--></script>
+<script type="text/javascript" src="./localvimrc_ ディレクトリごとに別の .vimrc を適用する - 玉虫色に染まれ！_files/asw.js"></script><script src="./localvimrc_ ディレクトリごとに別の .vimrc を適用する - 玉虫色に染まれ！_files/ads-common.js" type="text/javascript"></script><iframe src="./localvimrc_ ディレクトリごとに別の .vimrc を適用する - 玉虫色に染まれ！_files/cm.html" marginwidth="0" marginheight="0" width="160" height="600" border="0" frameborder="0" style="border:none;" scrolling="no"></iframe>
+
+<br>
+
+<iframe src="./localvimrc_ ディレクトリごとに別の .vimrc を適用する - 玉虫色に染まれ！_files/cm(1).html" width="120" height="90" frameborder="0" scrolling="no"></iframe>
+
+ </div>
+</div>
+
+</div>
+
+</div><script type="text/javascript" id="">(function(){var a=document.createElement("script"),b=document.getElementsByTagName("script")[0];a.async=!0;a.src="//s.yjtag.jp/tag.js#site\x3dlW0Bzla";b.parentNode.insertBefore(a,b)})();</script>
+<noscript>
+  &lt;iframe src="//b.yjtag.jp/iframe?c=lW0Bzla" width="1" height="1" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"&gt;&lt;/iframe&gt;
+</noscript><script type="text/javascript" id="">(function(b,a,c){b=a.getElementsByTagName(c)[0];a=a.createElement(c);a.async=!0;a.src="//dmp.im-apps.net/js/6604/0001/itm.js";b.parentNode.insertBefore(a,b)})(window,document,"script");</script>
+
+
+
+
+
+  <script type="text/javascript" src="./localvimrc_ ディレクトリごとに別の .vimrc を適用する - 玉虫色に染まれ！_files/hatena_dfp2.js" charset="UTF-8"></script>
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  var days = document.getElementById('days');
+  if (days && days.innerHTML.indexOf("今週のお題") != -1) {
+    _gaq.push(['_setCustomVar', 2, 'campaign', 'odai', 3]);
+  }
+
+  if (days && /\u4eca\u9031\u306e\u304a\u984c/.test(days.innerHTML)) {
+    _gaq.push(['_setCustomVar', 2, 'campaign', 'odai', 3]);
+  }
+
+  if (days && /ScanSnap\u7279\u5225\u30e2\u30c7\u30eb\u30fb\u30d6\u30ed\u30b0\u3067\u5ba3\u4f1d\u30b3\u30f3\u30c6\u30b9\u30c8/.test(days.innerHTML)) {
+    _gaq.push(['_setCustomVar', 2, 'campaign', 'scansnap1401bcn4ssacro', 3]);
+  }
+
+  if (days && /\u7279\u5225\u304a\u984c\u300c\u9752\u6625\u306e\u4e00\u518a\u300d/.test(days.innerHTML)) {
+    _gaq.push(['_setCustomVar', 2, 'campaign', 'pdmagazine', 3]);
+  }
+
+  if (days && /\u7279\u5225\u304a\u984c\u300c\u5fc3\u6e29\u307e\u308b\u30de\u30ca\u30fc\u306e\u8a71\u300d/.test(days.innerHTML)) {
+    _gaq.push(['_setCustomVar', 2, 'campaign', 'jrwest', 3]);
+  }
+
+  if (days && /Presso\u4f7f\u3063\u3066\u307f\u305f/.test(days.innerHTML)) {
+    _gaq.push(['_setCustomVar', 2, 'campaign', 'presso1404', 3]);
+  }
+
+  if (days && /CodeIQ\u306e\u554f\u984c\u30fb\u30d1\u30ba\u30eb\u3092\u8003\u3048\u3088\u3046\uff01/.test(days.innerHTML)) {
+    _gaq.push(['_setCustomVar', 2, 'campaign', 'codeiq_matsuri2013_2_2', 3]);
+  }
+
+  if (days && /2013\u5e74\u306b\u3084\u308a\u305f\u3044\u3053\u3068/.test(days.innerHTML)) {
+    _gaq.push(['_setCustomVar', 2, 'campaign', 'newyear2013', 3]);
+  }
+
+  if (days && /2012\u5e74\u30dc\u30c4\u738b\u6c7a\u5b9a\u6226\uff01\u30d5\u30eb\u30bf\u88fd\u83d3\ud7\u306f\u3066\u306a\u30d6\u30ed\u30b0\u304a\u984c\u30ad\u30e3\u30f3\u30da\u30fc\u30f3/.test(days.innerHTML)) {
+    _gaq.push(['_setCustomVar', 2, 'campaign', 'furuta', 3]);
+  }
+
+  if (days && /\u300c\u884c\u3063\u3066\u307f\u305f\u3044\u304a\u5e97\u30fb\u30ec\u30b9\u30c8\u30e9\u30f3\u300d/.test(days.innerHTML)) {
+    _gaq.push(['_setCustomVar', 2, 'campaign', 'gnavi201512', 3]);
+  }
+
+  if (days && /\u6d77\u5916\u30c9\u30e9\u30de\u300e\u30e9\u30a4\u30fb\u30c8\u30a5\u30fb\u30df\u30fc \u5618\u306e\u77ac\u9593\u300f\u89b3\u305f\u3044\uff01|\u300e\u30e9\u30a4\u30fb\u30c8\u30a5\u30fb\u30df\u30fc \u5618\u306e\u77ac\u9593\u300f\u7b2c1\u8a71\u306e\u611f\u60f3\u3092\u6559\u3048\u3066\u304f\u3060\u3055\u3044|\u4eca\u3060\u304b\u3089\u8a00\u3048\u308b\u300c\u5618\u3092\u3064\u3044\u3066\u3057\u307e\u3063\u305f\u30a8\u30d4\u30bd\u30fc\u30c9\u300d\u3092\u6559\u3048\u3066\u304f\u3060\u3055\u3044|\u3060\u307e\u3055\u308c\u305f\u3051\u3069\u3001\u8a31\u305b\u3066\u3057\u307e\u3063\u305f\u5618\u3092\u6559\u3048\u3066\u304f\u3060\u3055\u3044/.test(days.innerHTML)) {
+    _gaq.push(['_setCustomVar', 2, 'campaign', 'lietome', 3]);
+  }
+
+  if (days && /\u30de\u30a4\u30d9\u30b9\u30c8\u30bd\u30f3\u30b02013/.test(days.innerHTML)) {
+    _gaq.push(['_setCustomVar', 2, 'campaign', 'mybestsong2013', 3]);
+  }
+
+  if (days && /\u7d0d\u6dbc\uff01\u307b\u3093\u3068\u306b\u3042\u3063\u305f\u6016\u3044\u30b3\u30fc\u30c9/.test(days.innerHTML)) {
+    _gaq.push(['_setCustomVar', 2, 'campaign', 'codeiq_matsuri2013_2_1', 3]);
+  }
+
+  if (days && /\u590f\u306e\u5199\u771f2013/.test(days.innerHTML)) {
+    _gaq.push(['_setCustomVar', 2, 'campaign', 'photocon2013summer', 3]);
+  }
+
+  if (days && /Windows\/Office\u6b66\u52c7\u4f1d/.test(days.innerHTML)) {
+    _gaq.push(['_setCustomVar', 2, 'campaign', 'WindowsDevOpen', 3]);
+  }
+
+  if (days && /\u300c\u79c1\u306f\u3007\u3007\u738b\uff01\u300d\u30d0\u30a4\u30af\u738b\ud7\u306f\u3066\u306a\u30d6\u30ed\u30b0\u304a\u984c\u30ad\u30e3\u30f3\u30da\u30fc\u30f3/.test(days.innerHTML)) {
+    _gaq.push(['_setCustomVar', 2, 'campaign', 'bike-o', 3]);
+  }
+
+  if (days && /Visa\u30d7\u30ea\u30da\u30a4\u30c9\u300cV\u30d7\u30ea\u30ab\u300d\u8a66\u3057\u305f\u3044\uff01|Visa\u30d7\u30ea\u30da\u30a4\u30c9\u300cV\u30d7\u30ea\u30ab\u300d\u3001\u81ea\u5206\u306a\u3089\u3053\u3046\u4f7f\u3046\uff01|V\u30d7\u30ea\u30ab\u304c1\u4e07\u5186\u5206\u3042\u3063\u305f\u3089\u3001\u30cd\u30c3\u30c8\u3067\u4f55\u3092\u8cb7\u3044\u307e\u3059\u304b\uff1f/.test(days.innerHTML)) {
+    _gaq.push(['_setCustomVar', 2, 'campaign', 'vpreca', 3]);
+  }
+
+  if (days && /\u30a2\u30a4\u30c7\u30e0 \u30a8\u30f3\u30b8\u30cb\u30a2\u30ad\u30e3\u30ea\u30a2Hacks\u5171\u6709\u30d7\u30ed\u30b8\u30a7\u30af\u30c8|\u30a8\u30f3\u30b8\u30cb\u30a2\u3068\u3057\u3066\u306e\u3001\u3068\u3063\u3066\u304a\u304d\u306e\u30ad\u30e3\u30ea\u30a2Hacks\u3092\u6559\u3048\u3066\u304f\u3060\u3055\u3044|\u3042\u306a\u305f\u304c\u30a8\u30f3\u30b8\u30cb\u30a2\u8ee2\u8077\u30b5\u30a4\u30c8\u3092\u4f5c\u308b\u306a\u3089\u3001\u3069\u3093\u306a\u30b5\u30a4\u30c8\u306b\u3057\u307e\u3059\u304b\uff1f|5\u5e74\u5f8c\u306e\u300c\u30a8\u30f3\u30b8\u30cb\u30a2\u306e\u50cd\u304d\u65b9\u300d\u306f\u3001\u3069\u3046\u5909\u308f\u3063\u3066\u3044\u3066\u307b\u3057\u3044\u3067\u3059\u304b\uff1f/.test(days.innerHTML)) {
+    _gaq.push(['_setCustomVar', 2, 'campaign', 'aidemcareer', 3]);
+  }
+
+  if (days && /\u306f\u3066\u306a\u30c0\u30a4\u30a2\u30ea\u30fc10\u5468\u5e74\u304a\u3081\u3067\u3068\u3046\uff01/.test(days.innerHTML)) {
+    _gaq.push(['_setCustomVar', 2, 'campaign', 'hatenadiary10th', 3]);
+  }
+
+  if (days && /\u3086\u304f\u5e74\u304f\u308b\u5e742015/.test(days.innerHTML)) {
+    _gaq.push(['_setCustomVar', 2, 'campaign', '2014-2015campaign', 3]);
+  }
+
+  if (days && /\u8aad\u307f\u653e\u984c\u3067\u30b3\u30b9\u30d1\u3088\u3057\uff01\u96fb\u5b50\u66f8\u7c4d\u30a2\u30d7\u30eayomel.jp\u30ad\u30e3\u30f3\u30da\u30fc\u30f3/.test(days.innerHTML)) {
+    _gaq.push(['_setCustomVar', 2, 'campaign', 'yomel', 3]);
+  }
+
+  if (days && /\u30bb\u30c4\u30e4\u30af\u30a8\u30b9\u30c8/.test(days.innerHTML)) {
+    _gaq.push(['_setCustomVar', 2, 'campaign', 'setsuyaquest', 3]);
+  }
+
+  if (days && /\u79cb\u306e\u591c\u9577\u306f\u8aad\u66f8\u3068\u30d6\u30ed\u30b0/.test(days.innerHTML)) {
+    _gaq.push(['_setCustomVar', 2, 'campaign', 'bookreview2013fall', 3]);
+  }
+
+  if (days && /\u7279\u5225\u304a\u984c\u300c\u82b8\u8853\u306e\u79cb\u300d/.test(days.innerHTML)) {
+    _gaq.push(['_setCustomVar', 2, 'campaign', 'caillebotte', 3]);
+  }
+
+  if (days && /\u30a8\u30a4\u30d7\u30ea\u30eb\u30d5\u30fc\u30eb2014/.test(days.innerHTML)) {
+    _gaq.push(['_setCustomVar', 2, 'campaign', 'aprilfool2014', 3]);
+  }
+
+
+  _gaq.push(['c._setAccount', 'UA-3648419-3'], ['c._trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<!-- CG:1,CH:0,ICG:5,ICH:3,T:a -->
+
+
+<script type="text/javascript" id="">(function(a){var b=a.createElement("iframe"),c="https:"==a.location.protocol?"https://":"http://";b.src=c+"cf.im-apps.net/imid/beacon.html?sl\x3d3";b.style.display="none";a.body.appendChild(b)})(document);</script><iframe src="./localvimrc_ ディレクトリごとに別の .vimrc を適用する - 玉虫色に染まれ！_files/beacon.html" style="display: none;"></iframe><script type="text/javascript" id="" src="./localvimrc_ ディレクトリごとに別の .vimrc を適用する - 玉虫色に染まれ！_files/pageview.js"></script><script type="text/javascript" id="">!function(c,d,b,f){if(!d[c]){d[c]=function(){d[c].instances.push(this);this.init&&this.init()};d[c].instances=[];for(var a=0,e=["td_send","td_send_imid"];a<e.length;a++)d[c].prototype[e[a]]=function(a){return function(){this["tmp_"+a]=this["tmp_"+a]||[];this["tmp_"+a].push(Array.prototype.slice.call(arguments))}}(e[a]);a=b.getElementsByTagName(f)[0];b=b.createElement(f);b.async=!0;b.src="//cf.im-apps.net/sdk/tdim-1.1.0.min.js";a.parentNode.insertBefore(b,a)}}("TDIM",window,document,"script");
+var tdimjs=new TDIM;tdimjs.debug=!1;tdimjs.td_host="mobile-ybi.jp-east.idcfcloud.com";tdimjs.td_api_key="312/b4f0042d7c26b4f44d2561bbb5c396349b54b10e";tdimjs.td_db="cosmi_6604";tdimjs.im_api_token="TlOjMPj_m54xiIkb8Mzm7Q";tdimjs.td_send_imid("pageviews",{custom_data:"c,vim"});</script><iframe src="./localvimrc_ ディレクトリごとに別の .vimrc を適用する - 玉虫色に染まれ！_files/pd.html" width="0" height="0" style="display:none;"></iframe><iframe src="./localvimrc_ ディレクトリごとに別の .vimrc を適用する - 玉虫色に染まれ！_files/pd(1).html" width="0" height="0" style="display:none;"></iframe>
+      <iframe src="./localvimrc_ ディレクトリごとに別の .vimrc を適用する - 玉虫色に染まれ！_files/beacon(1).html" style="display: none;"></iframe><img src="./localvimrc_ ディレクトリごとに別の .vimrc を適用する - 玉虫色に染まれ！_files/dmp" width="1" height="1" border="0" style="display: none;"><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-P5GX4M');</script><img src="./localvimrc_ ディレクトリごとに別の .vimrc を適用する - 玉虫色に染まれ！_files/dmp" width="1" height="1" border="0" style="display: none;"><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-P5GX4M');</script><img width="1" height="1" src="./localvimrc_ ディレクトリごとに別の .vimrc を適用する - 玉虫色に染まれ！_files/saved_resource" style="display: none;"><div style="display: none; visibility: hidden;"><script type="text/javascript">!function(c,d,b,f){if(!d[c]){d[c]=function(){d[c].instances.push(this);this.init&&this.init()};d[c].instances=[];for(var a=0,e=["td_send","td_send_imid"];a<e.length;a++)d[c].prototype[e[a]]=function(a){return function(){this["tmp_"+a]=this["tmp_"+a]||[];this["tmp_"+a].push(Array.prototype.slice.call(arguments))}}(e[a]);a=b.getElementsByTagName(f)[0];b=b.createElement(f);b.async=!0;b.src="//cf.im-apps.net/sdk/tdim-0.11.2.js";a.parentNode.insertBefore(b,a)}}("TDIM",window,document,"script");var t=new TDIM;
+t.td_api_key="312/b4f0042d7c26b4f44d2561bbb5c396349b54b10e";t.td_db="cosmi_8045";t.im_api_token="omO0CDJd98sxiIkb8Mzm7Q";t.gtm_dl="dataLayer";t.td_send_imid("pageviews");</script></div><div style="display: none; visibility: hidden;">
+<script src="./localvimrc_ ディレクトリごとに別の .vimrc を適用する - 玉虫色に染まれ！_files/oct.js" type="text/javascript"></script>
+<script type="text/javascript">twttr.conversion.trackPid("nudt9",{tw_sale_amount:0,tw_order_quantity:0});</script>
+<noscript></noscript>
+</div><div style="display: none; visibility: hidden;">
+<script src="./localvimrc_ ディレクトリごとに別の .vimrc を適用する - 玉虫色に染まれ！_files/oct.js" type="text/javascript"></script>
+<script type="text/javascript">twttr.conversion.trackPid("nv3b2",{tw_sale_amount:0,tw_order_quantity:0});</script>
+<noscript></noscript>
+</div><div style="display: none; visibility: hidden;"><script type="text/javascript">!function(c,d,b,f){if(!d[c]){d[c]=function(){d[c].instances.push(this);this.init&&this.init()};d[c].instances=[];for(var a=0,e=["td_send","td_send_imid"];a<e.length;a++)d[c].prototype[e[a]]=function(a){return function(){this["tmp_"+a]=this["tmp_"+a]||[];this["tmp_"+a].push(Array.prototype.slice.call(arguments))}}(e[a]);a=b.getElementsByTagName(f)[0];b=b.createElement(f);b.async=!0;b.src="//cf.im-apps.net/sdk/tdim-0.11.2.js";a.parentNode.insertBefore(b,a)}}("TDIM",window,document,"script");var t=new TDIM;
+t.td_api_key="312/b4f0042d7c26b4f44d2561bbb5c396349b54b10e";t.td_db="cosmi_8045";t.im_api_token="omO0CDJd98sxiIkb8Mzm7Q";t.gtm_dl="dataLayer";t.td_send_imid("pageviews");</script></div><div style="display: none; visibility: hidden;">
+<script src="./localvimrc_ ディレクトリごとに別の .vimrc を適用する - 玉虫色に染まれ！_files/oct.js" type="text/javascript"></script>
+<script type="text/javascript">twttr.conversion.trackPid("nudt9",{tw_sale_amount:0,tw_order_quantity:0});</script>
+<noscript></noscript>
+</div><div style="display: none; visibility: hidden;">
+<script src="./localvimrc_ ディレクトリごとに別の .vimrc を適用する - 玉虫色に染まれ！_files/oct.js" type="text/javascript"></script>
+<script type="text/javascript">twttr.conversion.trackPid("nv3b2",{tw_sale_amount:0,tw_order_quantity:0});</script>
+<noscript></noscript>
+</div><script src="./localvimrc_ ディレクトリごとに別の .vimrc を適用する - 玉虫色に染まれ！_files/adsct"></script><script src="./localvimrc_ ディレクトリごとに別の .vimrc を適用する - 玉虫色に染まれ！_files/adsct(1)"></script><script src="./localvimrc_ ディレクトリごとに別の .vimrc を適用する - 玉虫色に染まれ！_files/adsct"></script><script src="./localvimrc_ ディレクトリごとに別の .vimrc を適用する - 玉虫色に染まれ！_files/adsct(1)"></script><iframe id="rufous-sandbox" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" style="position: absolute; visibility: hidden; display: none; width: 0px; height: 0px; padding: 0px; border: none;" src="./localvimrc_ ディレクトリごとに別の .vimrc を適用する - 玉虫色に染まれ！_files/saved_resource(7).html"></iframe></body></html>
